@@ -22,7 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped lang="scss">
+<!-- <style scoped lang="scss">
 @import "@/assets/all";
 
-</style>
+</style> -->
