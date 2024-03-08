@@ -42,28 +42,30 @@
             <div class="col-sm-8">
               <div class="mb-3">
                 <label for="title" class="form-label">標題</label>
-                <input type="text" class="form-control" id="title" placeholder="請輸入標題">
+                <input type="text" class="form-control" id="title" placeholder="請輸入標題" v-model="tempProduct.title">
               </div>
 
               <div class="row gx-2">
                 <div class="mb-3 col-md-6">
                   <label for="category" class="form-label">分類</label>
-                  <input type="text" class="form-control" id="category" placeholder="請輸入分類">
+                  <input type="text" class="form-control" id="category" placeholder="請輸入分類"
+                    v-model="tempProduct.category">
                 </div>
                 <div class="mb-3 col-md-6">
-                  <label for="price" class="form-label">單位</label>
-                  <input type="text" class="form-control" id="unit" placeholder="請輸入單位">
+                  <label for="unit" class="form-label">單位</label>
+                  <input type="text" class="form-control" id="unit" placeholder="請輸入單位" v-model="tempProduct.unit">
                 </div>
               </div>
 
               <div class="row gx-2">
                 <div class="mb-3 col-md-6">
                   <label for="origin_price" class="form-label">原價</label>
-                  <input type="number" class="form-control" id="origin_price" placeholder="請輸入原價">
+                  <input type="number" class="form-control" id="origin_price" placeholder="請輸入原價"
+                    v-model="tempProduct.origin_price">
                 </div>
                 <div class="mb-3 col-md-6">
                   <label for="price" class="form-label">售價</label>
-                  <input type="number" class="form-control" id="price" placeholder="請輸入售價">
+                  <input type="number" class="form-control" id="price" placeholder="請輸入售價" v-model="tempProduct.price">
                 </div>
               </div>
               <hr>
@@ -90,7 +92,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消
           </button>
-          <button type="button" class="btn btn-primary">確認</button>
+          <button type="button" class="btn btn-primary" @click="$emit('update-product', tempProduct)">確認</button>
         </div>
       </div>
     </div>
@@ -100,11 +102,22 @@
 <script>
 import Modal from "bootstrap/js/dist/modal";
 export default {
+  props: {
+    product: {
+      type: Object,
+      default() {return {};}
+    }
+  },
 
   data() {
     return {
       modal: {},
       tempProduct: {},
+    }
+  },
+  watch: {
+    product() { //NOTE 單向數據流 外層不能修改內層，但可以這樣改內容資料，當外層 prop 改變就監聽改內層 data
+      this.tempProduct = this.product;
     }
   },
   methods: {
