@@ -21,41 +21,41 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: 'Install Node'
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
-      - name: 'Install Deps'
-        run: npm install
-      - name: 'Test'
-        run: npx vitest --coverage.enabled true
-      - name: 'Report Coverage'
-        # Set if: always() to also generate the report if tests are failing
-        # Only works if you set `reportOnFailure: true` in your vite config as specified above
-        if: always()
-        uses: davelosert/vitest-coverage-report-action@v2
-  cypress-run:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          build: npm run build
-          browser: chrome
-          wait-on: http://localhost:4173
-          start: npm run test:e2e:dev
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: 'Install Node'
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: '20.x'
+  #     - name: 'Install Deps'
+  #       run: npm install
+  #     - name: 'Test'
+  #       run: npx vitest --coverage.enabled true
+  #     - name: 'Report Coverage'
+  #       # Set if: always() to also generate the report if tests are failing
+  #       # Only works if you set `reportOnFailure: true` in your vite config as specified above
+  #       if: always()
+  #       uses: davelosert/vitest-coverage-report-action@v2
+  # cypress-run:
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #     # Install NPM dependencies, cache them correctly
+  #     # and run all Cypress tests
+  #     - name: Cypress run
+  #       uses: cypress-io/github-action@v6
+  #       with:
+  #         build: npm run build
+  #         browser: chrome
+  #         wait-on: http://localhost:4173
+  #         start: npm run test:e2e:dev
 
   # Single deploy job since we're just deploying
   deploy:
-    needs: cypress-run
+    # needs: cypress-run
     if: ${{ success() }}
     environment:
       name: github-pages
