@@ -23,7 +23,8 @@
   </div>
 </template>
 <script>
-import Modal from "bootstrap/js/dist/modal";
+
+import modalMixin from "@/utils/mixins/modalMixin"
 export default {
   props: {
     item: {},
@@ -33,19 +34,7 @@ export default {
       modal: '',
     };
   },
-  mounted() {
-    console.log(this.$refs)
-    this.modal = new Modal(this.$refs.modal)
-
-  },
-  methods: {
-    showModal() {
-      this.modal.show();
-    },
-    hideModal() {
-      this.modal.hide();
-    },
-  },
+  mixins: [modalMixin],
 
 };
 </script>
