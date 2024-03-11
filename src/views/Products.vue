@@ -17,6 +17,7 @@
       <tbody>
 
         <tr v-for="item in products" :key="item.id">
+
           <td>{{ item.category }}</td>
           <td>{{ item.title }}</td>
           <td class="text-right">
@@ -43,10 +44,14 @@
 </template>
 
 
-<script>
+<script lang="ts">
 import ProductModal from "@/components/ProductModal.vue";
+// interface IProduct {
+//   name: string
+// }
+
 export default {
-  components: {ProductModal},
+  components: { ProductModal },
   data() {
     return {
       products: [],
@@ -74,7 +79,7 @@ export default {
       if (isNew) {
         this.tempProduct = {};
       } else {
-        this.tempProduct = {...item};
+        this.tempProduct = { ...item };
       }
       this.isNew = isNew;
       const productModal = this.$refs.productModal;
@@ -89,7 +94,7 @@ export default {
         httpMethod = 'put';
       }
       const productComponent = this.$refs.productModal;
-      this.$http[httpMethod](api, {data: this.tempProduct}).then((response) => {
+      this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
         console.log(response);
         productComponent.hideModal();
         this.getProducts();

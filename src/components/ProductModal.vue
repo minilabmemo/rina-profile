@@ -15,15 +15,15 @@
             <div class="col-sm-4">
               <div class="mb-3">
                 <label for="image" class="form-label">輸入圖片網址</label>
-                <input type="text" class="form-control" id="image" placeholder="請輸入圖片連結">
+                <input type="text" class="form-control" id="image" placeholder="請輸入圖片連結" v-model="tempProduct.imageUrl">
               </div>
               <div class="mb-3">
                 <label for="customFile" class="form-label">或 上傳圖片
                   <i class="fas fa-spinner fa-spin"></i>
                 </label>
-                <input type="file" id="customFile" class="form-control">
+                <input type="file" id="customFile" class="form-control" @change="uploadFile" ref="fileInput">
               </div>
-              <img class="img-fluid" alt="">
+              <img class="img-fluid" alt="" :src="tempProduct.imageUrl">
               <!-- 延伸技巧，多圖 -->
               <div class="mt-5">
                 <div class="mb-3 input-group">
@@ -72,15 +72,18 @@
 
               <div class="mb-3">
                 <label for="description" class="form-label">產品描述</label>
-                <textarea type="text" class="form-control" id="description" placeholder="請輸入產品描述"></textarea>
+                <textarea type="text" class="form-control" id="description" placeholder="請輸入產品描述"
+                  v-model="tempProduct.description"></textarea>
               </div>
               <div class="mb-3">
                 <label for="content" class="form-label">說明內容</label>
-                <textarea type="text" class="form-control" id="content" placeholder="請輸入產品說明內容"></textarea>
+                <textarea type="text" class="form-control" id="content" placeholder="請輸入產品說明內容"
+                  v-model="tempProduct.content"></textarea>
               </div>
               <div class="mb-3">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" :true-value="1" :false-value="0" id="is_enabled">
+                  <input class="form-check-input" type="checkbox" :true-value="1" :false-value="0" id="is_enabled"
+                    v-model="tempProduct.is_enabled">
                   <label class="form-check-label" for="is_enabled">
                     是否啟用
                   </label>
@@ -101,6 +104,7 @@
 
 <script>
 import Modal from "bootstrap/js/dist/modal";
+import {adminUploadApi} from "@/utils/uri"
 export default {
   props: {
     product: {
@@ -126,7 +130,18 @@ export default {
     },
     hideModal() {
       this.modal.hide();
-    }
+    },
+    uploadFile() {
+      const uploadedFile = this.$refs.fileInput.files[0];
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      this.$http.post(adminUploadApi, formData).then((response) => {
+        console.log(response.data);
+        if (response.data.success) {
+          this.tempProduct.imageUrl = response.data.imageUrl;
+        }
+      });
+    },
   },
   mounted() {
     console.log(this.$refs)
