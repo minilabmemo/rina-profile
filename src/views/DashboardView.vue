@@ -2,6 +2,7 @@
   <div>
     <Navbar></Navbar>
     <div class="container-fluid ">
+      <ToastMessages></ToastMessages>
       <RouterView />
     </div>
 
@@ -10,8 +11,13 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import emitter from "@/utils/methods/emitter";
+import ToastMessages from '@/components/ToastMessages.vue';
 export default {
-  components: {Navbar},
+  components: {Navbar, ToastMessages},
+  provide() {
+    return {emitter};
+  },
   created() {
     const token = document.cookie.replace(
       /(?:(?:^|.*;\s*)defToken\s*\=\s*([^;]*).*$)|^.*$/,
