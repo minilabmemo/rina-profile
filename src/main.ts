@@ -9,8 +9,11 @@ import App from './App.vue'
 import router from './router'
 import LoadingOverlay from 'vue3-loading-overlay';
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
+import { currency } from '@/utils/methods/filters';
 const app = createApp(App)
-
+app.config.globalProperties.$filters = {
+  currency,
+};
 app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios)
