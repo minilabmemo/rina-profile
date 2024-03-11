@@ -1,4 +1,5 @@
 <template>
+  <LoadingOverlay :active="isLoading"></LoadingOverlay>
   <div>
     <div class="text-end">
       <button class="btn btn-primary " type="button" @click="openModal(true)"> 增加一個產品</button>
@@ -57,6 +58,7 @@ export default {
       pagination: {},
       tempProduct: {},
       isNew: false,
+      isLoading: false,
     }
   },
 
@@ -64,8 +66,9 @@ export default {
 
     getProducts() {
       const url = `${import.meta.env.VITE_API}api/${import.meta.env.VITE_PATH}/admin/products`
-      console.log("login", url)
+      this.isLoading = true;
       this.axios.get(url).then((response) => {
+        this.isLoading = false;
         if (response.data.success) {
           //console.log(response.data)
           this.products = response.data.products;
@@ -93,6 +96,7 @@ export default {
       delModal.showModal();
     },
     updateProduct(item) {
+
       this.tempProduct = item;
       let api = `${import.meta.env.VITE_API}api/${import.meta.env.VITE_PATH}/admin/product`;
       let httpMethod = 'post';
@@ -102,6 +106,7 @@ export default {
       }
       const productComponent = this.$refs.productModal;
       this.$http[httpMethod](api, {data: this.tempProduct}).then((response) => {
+
         console.log(response);
         productComponent.hideModal();
         this.getProducts();
