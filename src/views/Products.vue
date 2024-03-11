@@ -41,8 +41,10 @@
       </tbody>
     </table>
   </div>
+  <Pagination :pages="pagination" @emit-pages="getProducts"></Pagination>
   <ProductModal ref="productModal" :product="tempProduct" @update-product="updateProduct"></ProductModal>
   <DelModal ref="delModal" :item="tempProduct" @del-item="deleteProduct"></DelModal>
+
 </template>
 
 
@@ -50,8 +52,9 @@
 import ProductModal from "@/components/ProductModal.vue";
 import DelModal from "@/components/DelModal.vue";
 import {adminProductApi} from '@/utils/uri'
+import Pagination from '@/components/Pagination.vue';
 export default {
-  components: {ProductModal, DelModal},
+  components: {ProductModal, DelModal, Pagination, },
   data() {
     return {
       products: [],
@@ -64,14 +67,15 @@ export default {
   inject: ['emitter'],
   methods: {
 
-    getProducts() {
-      const url = `${import.meta.env.VITE_API}api/${import.meta.env.VITE_PATH}/admin/products`
+    getProducts(page = 1) {
+      const url = `${import.meta.env.VITE_API}api/${import.meta.env.VITE_PATH}/admin/products?page=${page}`
       this.isLoading = true;
       this.axios.get(url).then((response) => {
         this.isLoading = false;
         if (response.data.success) {
           //console.log(response.data)
           this.products = response.data.products;
+          this.pagination = response.data.pagination;
         }
 
       })
