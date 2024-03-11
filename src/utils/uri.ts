@@ -7,3 +7,4 @@ export const adminApi=`${baseApi}admin`;
 
 
 export const adminUploadApi=`${baseApi}admin/upload`;
+export const adminProductApi=`${baseApi}admin/product`;

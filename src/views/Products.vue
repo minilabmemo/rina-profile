@@ -33,7 +33,7 @@
           <td>
             <div class="btn-group">
               <button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)">編輯</button>
-              <button class="btn btn-outline-danger btn-sm">刪除</button>
+              <button class="btn btn-outline-danger btn-sm" @click="openDelModal(item)">刪除</button>
             </div>
           </td>
         </tr>
@@ -41,17 +41,16 @@
     </table>
   </div>
   <ProductModal ref="productModal" :product="tempProduct" @update-product="updateProduct"></ProductModal>
+  <DelModal ref="delModal" :item="tempProduct" @del-item="deleteProduct"></DelModal>
 </template>
 
 
-<script lang="ts">
+<script>
 import ProductModal from "@/components/ProductModal.vue";
-// interface IProduct {
-//   name: string
-// }
-
+import DelModal from "@/components/DelModal.vue";
+import {adminProductApi} from '@/utils/uri'
 export default {
-  components: { ProductModal },
+  components: {ProductModal, DelModal},
   data() {
     return {
       products: [],
@@ -79,11 +78,19 @@ export default {
       if (isNew) {
         this.tempProduct = {};
       } else {
-        this.tempProduct = { ...item };
+        this.tempProduct = {...item};
       }
       this.isNew = isNew;
       const productModal = this.$refs.productModal;
       productModal.showModal();
+    },
+    openDelModal(item) {
+
+      this.tempProduct = {...item};
+      const delModal = this.$refs.delModal;
+      console.log(this.$refs)
+      console.log(delModal)
+      delModal.showModal();
     },
     updateProduct(item) {
       this.tempProduct = item;
@@ -94,12 +101,24 @@ export default {
         httpMethod = 'put';
       }
       const productComponent = this.$refs.productModal;
-      this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
+      this.$http[httpMethod](api, {data: this.tempProduct}).then((response) => {
         console.log(response);
         productComponent.hideModal();
         this.getProducts();
       });
+
     },
+    deleteProduct() {
+
+      let api = `${adminProductApi}/${this.tempProduct.id}`;
+      this.$http.delete(api).then((response) => {
+        console.log(response.data);
+        const delComponent = this.$refs.delModal;
+        delComponent.hideModal();
+        this.getProducts();
+      });
+
+    }
 
   },
   created() {
