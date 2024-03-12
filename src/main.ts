@@ -9,11 +9,17 @@ import App from './App.vue'
 import router from './router'
 import LoadingOverlay from 'vue3-loading-overlay';
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
-import { currency } from '@/utils/methods/filters';
+import { currency,date } from '@/utils/methods/filters';
+
+import $httpMessageState from '@/utils/methods/pushMessageState';
+
 const app = createApp(App)
 app.config.globalProperties.$filters = {
+  date,
   currency,
 };
+// 此函式的用途是整合 Ajax 的錯誤事件，統一整理發送給予 Toast 處理
+app.config.globalProperties.$httpMessageState = $httpMessageState;
 app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios)
