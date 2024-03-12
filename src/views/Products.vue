@@ -51,7 +51,7 @@
 <script>
 import ProductModal from "@/components/ProductModal.vue";
 import DelModal from "@/components/DelModal.vue";
-import {adminProductApi} from '@/utils/uri'
+import {adminProductApi} from '@/utils/path'
 import Pagination from '@/components/Pagination.vue';
 export default {
   components: {ProductModal, DelModal, Pagination, },
@@ -146,4 +146,4 @@ export default {
   },
 }
 
-</script>
+</script>@/utils/config

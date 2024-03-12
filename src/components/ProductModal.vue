@@ -104,7 +104,7 @@
 
 <script>
 
-import {adminUploadApi} from "@/utils/uri"
+import {adminUploadApi} from "@/utils/path"
 import modalMixin from "@/utils/mixins/modalMixin"
 export default {
   props: {

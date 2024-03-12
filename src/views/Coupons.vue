@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Loading :active="isLoading"></Loading>
+    <LoadingOverlay :active="isLoading"></LoadingOverlay>
     <div class="text-end mt-4">
       <button class="btn btn-primary" @click="openCouponModal(true)">
         建立新的優惠券
@@ -42,7 +42,7 @@
 <script>
 import CouponModal from '@/components/CouponModal.vue';
 import DelModal from '@/components/DelModal.vue';
-
+import {adminCouponsApi, adminCouponApi} from '@/utils/path'
 export default {
   components: {CouponModal, DelModal},
   props: {
@@ -80,7 +80,7 @@ export default {
     },
     getCoupons() {
       this.isLoading = true;
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupons`;
+      const url = `${adminCouponsApi}`;
       this.$http.get(url, this.tempProduct).then((response) => {
         this.coupons = response.data.coupons;
         this.isLoading = false;
@@ -89,7 +89,7 @@ export default {
     },
     updateCoupon(tempCoupon) {
       if (this.isNew) {
-        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupon`;
+        const url = `${adminCouponApi}`;
         this.$http.post(url, {data: tempCoupon}).then((response) => {
           console.log(response, tempCoupon);
           this.$httpMessageState(response, '新增優惠券');
@@ -97,7 +97,7 @@ export default {
           this.$refs.couponModal.hideModal();
         });
       } else {
-        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`;
+        const url = `${adminCouponApi}/${this.tempCoupon.id}`;
         this.$http.put(url, {data: this.tempCoupon}).then((response) => {
           console.log(response);
           this.$httpMessageState(response, '新增優惠券');
@@ -107,7 +107,7 @@ export default {
       }
     },
     delCoupon() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`;
+      const url = `${adminCouponApi}/${this.tempCoupon.id}`;
       this.isLoading = true;
       this.$http.delete(url).then((response) => {
         console.log(response, this.tempCoupon);

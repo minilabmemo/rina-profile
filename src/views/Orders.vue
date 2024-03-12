@@ -1,5 +1,5 @@
 <template>
-  <Loading :active="isLoading"></Loading>
+  <LoadingOverlay :active="isLoading"></LoadingOverlay>
   <table class="table mt-4">
     <thead>
       <tr>
@@ -54,6 +54,7 @@
 import DelModal from '@/components/DelModal.vue';
 import OrderModal from '@/components/orderModal.vue';
 import Pagination from '@/components/Pagination.vue';
+import {adminOrderApi, adminOrdersApi} from '@/utils/path'
 
 export default {
   data() {
@@ -74,7 +75,7 @@ export default {
   methods: {
     getOrders(currentPage = 1) {
       this.currentPage = currentPage;
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders?page=${currentPage}`;
+      const url = `${adminOrdersApi}?page=${currentPage}`;
       this.isLoading = true;
       this.$http.get(url, this.tempProduct).then((response) => {
         this.orders = response.data.orders;
@@ -96,7 +97,7 @@ export default {
     },
     updatePaid(item) {
       this.isLoading = true;
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/order/${item.id}`;
+      const api = `${adminOrderApi}/${item.id}`;
       const paid = {
         is_paid: item.is_paid,
       };
@@ -107,7 +108,7 @@ export default {
       });
     },
     delOrder() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/order/${this.tempOrder.id}`;
+      const url = `${adminOrderApi}/${this.tempOrder.id}`;
       this.isLoading = true;
       this.$http.delete(url).then((response) => {
         console.log(response);
@@ -119,7 +120,7 @@ export default {
   },
   created() {
     this.getOrders();
-    console.log(process.env.VUE_APP_API);
+
   },
 };
 </script>
