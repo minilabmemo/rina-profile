@@ -13,3 +13,7 @@ export const adminOrderApi=`${baseApi}admin/order`;
 
 export const adminCouponsApi=`${baseApi}admin/coupons`;
 export const adminCouponApi=`${baseApi}admin/coupon`;
+
+export const userProductsApi=`${baseApi}products/all`;
+export const userProductApi=`${baseApi}product`;
+export const userCartApi=`${baseApi}cart`;
