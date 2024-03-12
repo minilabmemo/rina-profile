@@ -29,7 +29,12 @@
                   <button type="button" class="btn btn-outline-secondary" @click="getProduct(item.id)">
                     查看更多
                   </button>
-                  <button type="button" class="btn btn-outline-danger">
+                  <button type="button" class="btn btn-outline-danger" :disabled="this.status.loadingItem === item.id"
+                    @click="addCart(item.id)">
+                    <div v-if="this.status.loadingItem === item.id" class="spinner-grow text-danger spinner-grow-sm"
+                      role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
                     加到購物車
                   </button>
                 </div>
@@ -44,7 +49,7 @@
 </template>
 
 <script>
-import {userProductsApi} from '@/utils/path'
+import {userProductsApi, userCartApi} from '@/utils/path'
 export default {
   data() {
     return {
@@ -67,6 +72,19 @@ export default {
     },
     getProduct(id) {
       this.$router.push(`/user/product/${id}`);
+    },
+    addCart(id) {
+      const url = `${userCartApi}`;
+      this.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty: 1,
+      };
+      this.$http.post(url, {data: cart})
+        .then((res) => {
+          this.status.loadingItem = '';
+          console.log(res);
+        });
     },
   },
   created() {
