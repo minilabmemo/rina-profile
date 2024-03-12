@@ -9,8 +9,8 @@ import App from './App.vue'
 import router from './router'
 import LoadingOverlay from 'vue3-loading-overlay';
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { currency,date } from '@/utils/methods/filters';
-
 import $httpMessageState from '@/utils/methods/pushMessageState';
 
 const app = createApp(App)
