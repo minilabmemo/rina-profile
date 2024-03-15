@@ -237,6 +237,7 @@ $reds: (
 ) !default;
 
 $oranges: (
+  "orange": $orange-100,
   "orange-100": $orange-100,
   "orange-200": $orange-200,
   "orange-300": $orange-300,
@@ -317,7 +318,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1749,3 +1751,12 @@ $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, remo
 $pre-color:                         null !default;
 
 //@import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
+//自訂義 colors map start//
+$custom-colors: (
+  "custom-color": #900
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $oranges);//oranges BS 上面已有定義
+$theme-colors: map-merge($theme-colors, $grays);//FIXME 不生效？
+//自訂義 colors map end//
