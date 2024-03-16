@@ -24,12 +24,14 @@
         <span class="text-secondary "> secondary text</span>
         <span class="text-danger "> secondary text</span>
         <h2>gray</h2>
-        <span class="text-gray "> gray text</span>
-        <span class="text-gray-gray "> gray text</span>
-        <span class="text-gray-200 "> gray-200 text</span>
+        <span class="text-gray "> gray </span>
+        <span class="text-gray-gray "> gray test</span>
+        <span class="text-gray-200 "> gray-200 </span>
+        <span class="text-gray-500 "> gray-500 </span>
         <h2>orange</h2>
         <span class="text-orange "> orange text</span>
         <span class="text-orange-200 "> orange-200 text</span>
+        <span class="text-orange-500 "> orange-500 </span>
         <h2>custom-color</h2>
         <span class="text-custom-color "> custom-color</span>
       </div>
