@@ -30,6 +30,8 @@
         <h2>orange</h2>
         <span class="text-orange "> orange text</span>
         <span class="text-orange-200 "> orange-200 text</span>
+        <h2>custom-color</h2>
+        <span class="text-custom-color "> custom-color</span>
       </div>
     </div>
   </div>
