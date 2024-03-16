@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
     <TheWelcome />
@@ -12,7 +8,9 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 
 <script>
+import TheWelcome from '../components/TheWelcome.vue'
 export default {
+  components: {TheWelcome},
   created() {
     //查看環境變數，本地跟部屬不同
     console.log("VITE_API", import.meta.env.VITE_API)
