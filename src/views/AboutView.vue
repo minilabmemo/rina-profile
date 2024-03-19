@@ -23,11 +23,11 @@
         <span class="text-primary"> primary text</span>
         <span class="text-secondary "> secondary text</span>
         <span class="text-danger "> secondary text</span>
-        <h2>gray</h2>
-        <span class="text-gray "> gray </span>
-        <span class="text-gray-gray "> gray test</span>
-        <span class="text-gray-200 "> gray-200 </span>
-        <span class="text-gray-500 "> gray-500 </span>
+        <h2>gray <code>需注意預設沒有gray字眼</code></h2>
+
+        <span class="text-200 "> text-200 </span>
+        <span class="text-500 "> text-500 </span>
+        <span class="bg-500 "> bg-500 </span>
         <h2>orange</h2>
         <span class="text-orange "> orange text</span>
         <span class="text-orange-200 "> orange-200 text</span>
