@@ -109,6 +109,57 @@
       </div>
     </div>
 
+    <hr>
+    <h3>[練習] row 裡面的 row 大小？</h3>
+    <h5>row 裡面的 col-1 的 row 含有大小</h5>
+    <code>正常,row===col-1,不過col有padding,所以裡面的col-12還是會縮小。</code>
+    <div><code>會發現裡面的row 左右多出了-12的邊界？？。</code></div>
+    <div class="row  bg-info ">
+      <div class="col-1 bg-success">
+        <div class="row bg-warning ">
+          <div class="col-12  ">
+            <i class="bi bi-alarm"></i> <span>air</span><i class="bi bi-airplane"></i><i class="bi bi-archive"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+
+    <h5 class="text-danger ">row 裡面的`對齊 col-1 d-flex` 的 row 含有大小</h5>
+    <div><code>明顯縮小，受到d-flex影響了。</code></div>
+    <div><code>會發現裡面的row 左右多出了-12的邊界？？。</code></div>
+    <div class="row  bg-info justify-content-center align-items-center ">
+      <div class="col-1 bg-success d-flex  justify-content-center align-items-center ">
+        <div class="row bg-warning ">
+          <div class="col-12 ">
+            <i class="bi bi-alarm"></i> <span>air</span><i class="bi bi-airplane"></i><i class="bi bi-archive"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5 class="text-success  ">（修正）把 d-flex 一到下一層 row 上，not col</h5>
+    <code>正常,row===col-1,不過col有padding,所以裡面的col-12還是會縮小。</code>
+    <div><code>會發現裡面的row 左右多出了-12的邊界？？。</code></div>
+    <div class="row bg-info justify-content-center align-items-center">
+      <div class="col-1 bg-success">
+        <div class="row justify-content-center align-items-center bg-warning">
+          <div class="col-12">
+            <i class="bi bi-alarm"></i> <span>air</span><i class="bi bi-airplane"></i><i class="bi bi-archive"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
 
 </template>
