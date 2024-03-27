@@ -3,6 +3,7 @@
     <TheWelcome />
     <h1>Router</h1>
     <router-link to="./about">go about page</router-link>
+    <router-link to="./row">bootstrap 格線系統</router-link>
   </main>
 </template>
 
