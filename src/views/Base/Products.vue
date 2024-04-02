@@ -49,10 +49,10 @@
 
 
 <script>
-import ProductModal from "@/components/ProductModal.vue";
-import DelModal from "@/components/DelModal.vue";
+import ProductModal from "@/components/Base/ProductModal.vue";
+import DelModal from "@/components/Base/DelModal.vue";
 import {adminProductApi} from '@/utils/path'
-import Pagination from '@/components/Pagination.vue';
+import Pagination from '@/components/Base/Pagination.vue';
 export default {
   components: {ProductModal, DelModal, Pagination, },
   data() {

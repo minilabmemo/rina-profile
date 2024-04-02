@@ -4,7 +4,7 @@
 
 ## 練習項目
 
-1. 練習最終作業 購物車的過程。
+1. 練習最終作業 購物車的過程 [option API]。
 
 - bootstrap 樣式設定與客製
 - 原始首頁：http://localhost:5173/
@@ -14,12 +14,11 @@
   - 前台 http://localhost:5173/#/user/cart
     - 加入購物車/送出訂單
 
-2. 練習 Pinia 功能。
+2. 練習 Pinia 功能 [& Composition API]。
 
-- Pinia 狀態管理工具
--
+- Pinia 狀態管理工具 http://localhost:5173/#/pinia/cart
 
 ## 延伸專案
 
 - f2e-ec-store : https://github.com/minilabmemo/f2e-ec-store
-  中場作業延伸改寫，options API。
+  - 中場作業延伸改寫，options API，提交。

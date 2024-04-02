@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import CouponModal from '@/components/CouponModal.vue';
-import DelModal from '@/components/DelModal.vue';
+import CouponModal from '@/components/Base/CouponModal.vue';
+import DelModal from '@/components/Base/DelModal.vue';
 import {adminCouponsApi, adminCouponApi} from '@/utils/path'
 export default {
   components: {CouponModal, DelModal},

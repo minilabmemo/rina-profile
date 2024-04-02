@@ -12,7 +12,7 @@
 
 <script>
 import emitter from '@/utils/methods/emitter';
-import ToastMessages from '@/components/ToastMessages.vue';
+import ToastMessages from '@/components/Base/ToastMessages.vue';
 
 export default {
   components: {
