@@ -22,6 +22,19 @@ const router = createRouter({
 
     },
     {
+      path: '/pinia/about',
+      name: 'UserAbout',
+    
+      component: () => import('../views/Pinia/UserAbout.vue'),
+
+    }, {
+      path: '/pinia/about/option',
+      name: 'UserAboutOption',
+ 
+      component: () => import('../views/Pinia/UserAboutOption.vue'),
+
+    },
+    {
       path: '/row',
       name: 'row',
       // route level code-splitting

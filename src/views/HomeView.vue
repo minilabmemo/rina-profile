@@ -2,8 +2,16 @@
   <main>
     <TheWelcome />
     <h1>Router</h1>
-    <router-link to="./about">go about page</router-link>
-    <router-link to="./row">bootstrap 格線系統</router-link>
+
+    <h2>練習</h2>
+    <div><router-link to="./about">go about page</router-link></div>
+    <h2>bootstrap 練習</h2>
+    <div> <router-link to="./row">bootstrap 格線系統</router-link></div>
+
+    <h2>pinia 練習</h2>
+    <div> <router-link to="./pinia/about/option">go pinia about [option]</router-link></div>
+    <div> <router-link to="./pinia/about">go pinia about page</router-link></div>
+
   </main>
 </template>
 
