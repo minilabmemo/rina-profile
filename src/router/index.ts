@@ -22,24 +22,26 @@ const router = createRouter({
 
     },
     {
-      path: '/pinia/about',
-      name: 'UserAbout',
-    
-      component: () => import('../views/Pinia/UserAbout.vue'),
-
-    }, {
-      path: '/pinia/about/option',
-      name: 'UserAboutOption',
- 
-      component: () => import('../views/Pinia/UserAboutOption.vue'),
-
+      path: '/pinia',
+      component: () => import('../views/Pinia/Dashboard.vue'),
+      children: [
+        {
+          path: 'about',
+          component: () => import('../views/Pinia/UserAbout.vue'),
+        },
+        {
+          path: 'about/option',
+          component: () => import('../views/Pinia/UserAboutOption.vue'),
+        },
+        {
+          path: 'cart',
+          component: () => import('../views/Pinia/Cart.vue'),
+        },
+      ],
     },
     {
       path: '/row',
       name: 'row',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/RowView.vue'),
 
     },
