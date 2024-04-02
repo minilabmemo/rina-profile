@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/Base/Navbar.vue';
+import Navbar from '@/components/EC/Navbar.vue';
 import emitter from "@/utils/methods/emitter";
 import ToastMessages from '@/components/Base/ToastMessages.vue';
 export default {

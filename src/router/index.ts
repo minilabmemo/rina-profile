@@ -8,10 +8,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
-   
-  
     {
       path: '/about',
       name: 'about',
@@ -19,7 +17,16 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Base/AboutView.vue'),
-
+    },
+    {
+      path: '/lab',
+      name: 'lab',
+      children: [
+        {
+          path: 'about',
+          component: () => import('../views/Lab/AboutMe.vue'),
+        }
+      ]
     },
     {
       path: '/pinia',
@@ -49,40 +56,40 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/Base/LoginView.vue')
+      component: () => import('../views/EC/LoginView.vue')
     },{
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/Base/DashboardView.vue'),
+      component: () => import('../views/EC/DashboardView.vue'),
       children:[
         {
           path:'products',
-          component:()=>import('../views/Base/Products.vue'),
+          component:()=>import('../views/EC/Products.vue'),
         } ,{
           path: 'orders',
-          component: () => import('../views/Base/Orders.vue'),
+          component: () => import('../views/EC/Orders.vue'),
         },
         {
           path: 'coupons',
-          component: () => import('../views/Base/Coupons.vue'),
+          component: () => import('../views/EC/Coupons.vue'),
         },
       ]
     },
     {
       path: '/user',
-      component: () => import('../views/Base/Userboard.vue'),
+      component: () => import('../views/EC/Userboard.vue'),
       children: [
         {
           path: 'cart',
-          component: () => import('../views/Base/UserCart.vue'),
+          component: () => import('../views/EC/UserCart.vue'),
         },
         {
           path: 'product/:productId',
-          component: () => import('../views/Base/UserProduct.vue'),
+          component: () => import('../views/EC/UserProduct.vue'),
         },
         {
           path: 'checkout/:orderId',
-          component: () => import('../views/Base/UserCheckout.vue'),
+          component: () => import('../views/EC/UserCheckout.vue'),
         },
       ],
     },

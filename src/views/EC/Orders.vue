@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import DelModal from '@/components/EC/DelModal.vue';
-import OrderModal from '@/components/EC/orderModal.vue';
+import DelModal from '@/components/Base/DelModal.vue';
+import OrderModal from '@/components/Base/orderModal.vue';
 import Pagination from '@/components/Base/Pagination.vue';
 import {adminOrderApi, adminOrdersApi} from '@/utils/path'
 
