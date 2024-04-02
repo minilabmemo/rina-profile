@@ -96,39 +96,25 @@
 
 <script>
 import {userProductsApi, userCartApi, userCouponApi, userOrderApi} from '@/utils/path'
-
+import {mapState, mapActions} from 'pinia';
+import productsStore from '@/stores/productStore';
 export default {
   data() {
     return {
-      products: [],
-      product: {},
       status: {
         loadingItem: '',
       },
-      form: {
-        user: {
-          name: '',
-          email: '',
-          tel: '',
-          address: '',
-        },
-        message: '',
-      },
+
       cart: {},
       isLoading: false,
-      coupon_code: '',
+
     };
   },
+  computed: {
+    ...mapState(productsStore, ['products']),
+  },
   methods: {
-    getProducts() {
-      const url = `${userProductsApi}`;
-      this.isLoading = true;
-      this.$http.get(url).then((response) => {
-        this.products = response.data.products;
-        console.log('products:', response);
-        this.isLoading = false;
-      });
-    },
+    ...mapActions(productsStore, ['getProducts']),
     addToCart(id, qty = 1) {
       const url = `${userCartApi}`;
       this.status.loadingItem = id;
