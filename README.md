@@ -5,6 +5,7 @@
 ## 練習項目
 
 1. 練習最終作業 購物車的過程。
+
 - bootstrap 樣式設定與客製
 - 原始首頁：http://localhost:5173/
 - 六角 API 商品購物管理 options API
@@ -15,6 +16,8 @@
 
 2. 練習 Pinia 功能。
 
+- Pinia 狀態管理工具
+-
 
 ## 延伸專案
 

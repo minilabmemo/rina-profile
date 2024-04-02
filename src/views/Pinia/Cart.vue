@@ -14,20 +14,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="item in products" :key="item.id">
+            <tr v-for="item in sortProducts" :key="item.id">
               <td style="width: 200px">
                 <div style="height: 100px; background-size: cover; background-position: center"
                   :style="{ backgroundImage: `url(${item.imageUrl})` }"></div>
               </td>
               <td>{{ item.title }}</td>
               <td>
-                <div class="h5">現在只要 {{ item.origin_price }} 元</div>
+                <small>原價 {{ item.origin_price }} 元</small>
+                <div class="h5">現在只要 {{ item.price }} 元</div>
               </td>
               <td>
                 <div class="btn-group btn-group-sm">
                   <button type="button" class="btn btn-outline-danger" @click="addToCart(item.id)"
-                    :disabled="status.loadingItem === item.id">
-                    <span class="spinner-border spinner-grow-sm" v-if="status.loadingItem === item.id"></span>
+                    :disabled="cartLoadingItem === item.id">
+                    <span class="spinner-border spinner-grow-sm" v-if="cartLoadingItem === item.id"></span>
                     加到購物車
                   </button>
                 </div>
@@ -52,8 +53,8 @@
               <template v-if="cart.carts">
                 <tr v-for="item in cart.carts" :key="item.id">
                   <td>
-                    <button type="button" class="btn btn-outline-danger btn-sm"
-                      :disabled="status.loadingItem === item.id" @click="removeCartItem(item.id)">
+                    <button type="button" class="btn btn-outline-danger btn-sm" :disabled="cartLoadingItem === item.id"
+                      @click="removeCartItem(item.id)">
                       x
                     </button>
                   </td>
@@ -66,7 +67,7 @@
                   <td>
                     <div class="input-group input-group-sm">
                       <input type="number" class="form-control" v-model.number="item.qty"
-                        :disabled="status.loadingItem === item.id" @change="updateCart(item)">
+                        :disabled="cartLoadingItem === item.id" @change="updateCart(item)">
                       <div class="input-group-text">/ {{ item.product.unit }}</div>
                     </div>
                   </td>
@@ -95,76 +96,26 @@
 </template>
 
 <script>
-import {userProductsApi, userCartApi, userCouponApi, userOrderApi} from '@/utils/path'
+
 import {mapState, mapActions} from 'pinia';
 import productsStore from '@/stores/productStore';
+import statusStore from '@/stores/statusStore';
+import cartStore from '@/stores/cartStore';
+
 export default {
   data() {
     return {
-      status: {
-        loadingItem: '',
-      },
-
-      cart: {},
-      isLoading: false,
-
     };
   },
   computed: {
     ...mapState(productsStore, ['products']),
+    ...mapState(productsStore, ['sortProducts']),
+    ...mapState(cartStore, ['cart']),
+    ...mapState(statusStore, ['isLoading', 'cartLoadingItem']),
   },
   methods: {
     ...mapActions(productsStore, ['getProducts']),
-    addToCart(id, qty = 1) {
-      const url = `${userCartApi}`;
-      this.status.loadingItem = id;
-      const cart = {
-        product_id: id,
-        qty,
-      };
-      this.$http.post(url, {data: cart}).then((response) => {
-        // this.$httpMessageState(response, '加入購物車');
-        console.log(response);
-        this.status.loadingItem = '';
-        this.getCart();
-      });
-    },
-    getCart() {
-      const url = `${userCartApi}`;
-      this.isLoading = true;
-      this.$http.get(url).then((response) => {
-        this.cart = response.data.data;
-        console.log(response);
-        this.isLoading = false;
-      });
-    },
-    updateCart(item) {
-      const url = `${userCartApi}/${item.id}`;
-      this.isLoading = true;
-      this.status.loadingItem = item.id;
-      const cart = {
-        product_id: item.product_id,
-        qty: item.qty,
-      };
-      this.$http.put(url, {data: cart}).then((response) => {
-        console.log(response);
-        this.getCart();
-        this.status.loadingItem = '';
-        this.isLoading = false;
-      });
-    },
-    removeCartItem(id) {
-      this.status.loadingItem = id;
-      const url = `${userCartApi}/${id}`;
-      this.isLoading = true;
-      this.$http.delete(url).then((response) => {
-        console.log(response);
-        // this.$httpMessageState(response, '移除購物車品項');
-        this.status.loadingItem = '';
-        this.getCart();
-        this.isLoading = false;
-      });
-    },
+    ...mapActions(cartStore, ['addToCart', 'getCart', 'updateCart', 'removeCartItem']),
   },
   created() {
     this.getProducts();

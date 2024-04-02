@@ -1,18 +1,25 @@
 import axios from 'axios';
 import {defineStore} from 'pinia';
-import {userProductsApi, userCartApi, userCouponApi, userOrderApi} from '@/utils/path'
+import {userProductsApi} from '@/utils/path'
+import statusStore from './statusStore';
+const status = statusStore();
+
 export default defineStore('productStore', {
+
   state: () => ({
     products: [],
   }),
+  getters: {
+    sortProducts: (state) => state.products.sort((a, b) => a.price - b.price),
+  },
   actions: {
     getProducts() {
       const url = `${userProductsApi}`;
-      // this.isLoading = true;
+      status.isLoading = true;
       axios.get(url).then((response) => {
         this.products = response.data.products;
         console.log('products:', response);
-        // this.isLoading = false;
+        status.isLoading = false;
       });
     },
   },
