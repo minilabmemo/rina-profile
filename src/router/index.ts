@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/Base/HomeView.vue'
+import HomeView from '../views/HomeView.vue'
 import NotFound from '../views/Base/NotFound.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -25,6 +25,10 @@ const router = createRouter({
         {
           path: 'about',
           component: () => import('../views/Lab/AboutMe.vue'),
+        },
+        {
+          path: 'flex',
+          component: () => import('../views/Lab/FlexView.vue'),
         }
       ]
     },
@@ -33,12 +37,16 @@ const router = createRouter({
       component: () => import('../views/Pinia/Dashboard.vue'),
       children: [
         {
+          path: 'about/option',
+          component: () => import('../views/Pinia/UserAboutOption.vue'),
+        },
+        {
           path: 'about',
           component: () => import('../views/Pinia/UserAbout.vue'),
         },
         {
-          path: 'about/option',
-          component: () => import('../views/Pinia/UserAboutOption.vue'),
+          path: 'about2',
+          component: () => import('../views/Pinia/UserAbout2.vue'),
         },
         {
           path: 'cart',

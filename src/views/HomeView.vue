@@ -13,6 +13,7 @@
     <h2>pinia 練習</h2>
     <div> <router-link to="./pinia/about/option">go 獲取資料 [option 版本]</router-link></div>
     <div> <router-link to="./pinia/about">go 獲取資料 [composition 版本]</router-link></div>
+    <div> <router-link to="./pinia/about2">go 獲取資料 [composition script setup 版本]</router-link></div>
     <div> <router-link to="./pinia/cart">user 前台 商品與購物車 [pinia 版本]</router-link></div>
 
   </main>
