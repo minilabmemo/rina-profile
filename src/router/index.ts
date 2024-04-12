@@ -8,7 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: HomeView
     },
     {
       path: '/about',
@@ -16,7 +16,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Base/AboutView.vue'),
+      component: () => import('../views/Base/AboutView.vue')
     },
     {
       path: '/lab',
@@ -24,11 +24,11 @@ const router = createRouter({
       children: [
         {
           path: 'about',
-          component: () => import('../views/Lab/AboutMe.vue'),
+          component: () => import('../views/Lab/AboutMe.vue')
         },
         {
           path: 'flex',
-          component: () => import('../views/Lab/FlexView.vue'),
+          component: () => import('../views/Lab/FlexView.vue')
         }
       ]
     },
@@ -38,49 +38,59 @@ const router = createRouter({
       children: [
         {
           path: 'about/option',
-          component: () => import('../views/Pinia/UserAboutOption.vue'),
+          component: () => import('../views/Pinia/UserAboutOption.vue')
         },
         {
           path: 'about',
-          component: () => import('../views/Pinia/UserAbout.vue'),
+          component: () => import('../views/Pinia/UserAbout.vue')
         },
         {
           path: 'about2',
-          component: () => import('../views/Pinia/UserAbout2.vue'),
+          component: () => import('../views/Pinia/UserAbout2.vue')
         },
         {
           path: 'cart',
-          component: () => import('../views/Pinia/Cart.vue'),
-        },
-      ],
+          component: () => import('../views/Pinia/Cart.vue')
+        }
+      ]
     },
     {
-      path: '/row',
-      name: 'row',
-      component: () => import('../views/Base/RowView.vue'),
+      path: '/bs',
 
+      children: [
+        {
+          path: 'row',
+          component: () => import('../views/Base/RowView.vue')
+        },
+        {
+          path: 'card',
+          component: () => import('../views/Base/CardView.vue')
+        }
+      ]
     },
-     { path: '/:about(.*)*', redirect: { name: 'about' }  },
+    { path: '/:about(.*)*', redirect: { name: 'about' } },
     {
       path: '/login',
       name: 'login',
       component: () => import('../views/EC/LoginView.vue')
-    },{
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/EC/DashboardView.vue'),
-      children:[
+      children: [
         {
-          path:'products',
-          component:()=>import('../views/EC/Products.vue'),
-        } ,{
+          path: 'products',
+          component: () => import('../views/EC/Products.vue')
+        },
+        {
           path: 'orders',
-          component: () => import('../views/EC/Orders.vue'),
+          component: () => import('../views/EC/Orders.vue')
         },
         {
           path: 'coupons',
-          component: () => import('../views/EC/Coupons.vue'),
-        },
+          component: () => import('../views/EC/Coupons.vue')
+        }
       ]
     },
     {
@@ -89,18 +99,18 @@ const router = createRouter({
       children: [
         {
           path: 'cart',
-          component: () => import('../views/EC/UserCart.vue'),
+          component: () => import('../views/EC/UserCart.vue')
         },
         {
           path: 'product/:productId',
-          component: () => import('../views/EC/UserProduct.vue'),
+          component: () => import('../views/EC/UserProduct.vue')
         },
         {
           path: 'checkout/:orderId',
-          component: () => import('../views/EC/UserCheckout.vue'),
-        },
-      ],
-    },
+          component: () => import('../views/EC/UserCheckout.vue')
+        }
+      ]
+    }
   ]
 })
 
