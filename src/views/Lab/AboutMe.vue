@@ -1,5 +1,5 @@
 <template>
-  <div class="container-xl manrope-font mt-5 " data-bs-theme="profile">
+  <div class="container-xl manrope-font mt-5 " data-bs-theme="sunny">
     <nav class="navbar  ">
       <div class="flex-grow-1  d-flex justify-content-between align-items-center ">
         <a class="navbar-brand" href="#">
