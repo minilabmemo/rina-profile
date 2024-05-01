@@ -1,10 +1,10 @@
 /* // Required */
 @import "node_modules/bootstrap/scss/functions";
-@import "./helpers/variables";
-@import "./helpers/variables-blue";
 
 /* // Custom.scss
 // Option A: Include all of Bootstrap */
+@import "./helpers/variables";
+@import "./helpers/variables-profile";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 

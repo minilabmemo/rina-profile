@@ -1,24 +1,75 @@
-
+//File: _variables-profile.scss
 // 研究日誌 1
 // 自製自己的主題 blue ,以下從 root_ [data-bs-theme="light"] 而來
 // 使用
 // // @import "./helpers/variables";
-// // @import "./helpers/variables-blue";
+// // @import "./helpers/variables-profile";
 
-// // '<div data-bs-theme="blue">
+// // '<div data-bs-theme="rofile">
 // // <div class="text-primary ">text</div> ' 就可以替換掉顏色，
 
-// 但有一個問題 TODO 
-// 1.是 theme-colors 必須替換掉成 themes-colors
+// 但有些問題 TODO 
+// 1.是 theme-colors 變數必須替換掉成 新命名，不能直接換掉嗎？？？？這樣會讓很多自動生成的失敗...網上也有相同提問 override issue
+//-> 找到原因了 在$theme-colors 最後有一個`!default` 要刪除！！！！->另外新增一個整理過後的 variables-about.scss 試試看
 // [已解]2. $themes-colors-rgb:  設定必須是 red 的 rgb ? 該如何自動轉換？[已解] 可以利用 to-rgb($red),
-// 3. 跟第一點一樣，有一些變數定義需要自己產生，目前都先暫時 marked 掉
-// 失敗作法 以下程式碼放進＿root.scss 也沒用
+// [最佳解] 利用$profile-colors-rgb: map-loop($profile-colors, to-rgb, "$value") !default; 即可。
 
-[data-bs-theme="profile-light"] {
+// 3. 跟第一點一樣，有一些變數定義需要自己產生，目前都先暫時 marked 掉
+// 失敗嚐試作法 以下程式碼放進＿root.scss 也沒用
+// 4. 加入 !default？ ->  $black:#362F2F ; !default; 反而沒生效 黑色還是$000，回到第一點 似乎是原因
+
+//這檔案留有研究過程，另外新增一個整理過後的 variables-about.scss 試試看。 
+
+@import "node_modules/bootstrap/scss/mixins";
+
+[data-bs-theme="profile"] {
+  
   // Note: Custom variable values only support SassScript inside `#{}`.
-  $primary:red;
-$themes-colors: (
-  "primary":    red,
+  $primary:#DD8560 ;
+  $secondary:#A37875;
+  $black:#362F2F ;
+  $gray:#595555;
+
+$colors : ( //無法覆蓋
+  "blue":       $blue ,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black ,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+
+$profile-colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray,
+  "gray-dark":  $gray-800
+) !default;
+
+//from _maps.scss rgb 的顏色生成只要用這句就好，不用像下面 profile-theme-colors-rgb 列這麼長
+$profile-colors-rgb: map-loop($profile-colors, to-rgb, "$value") !default;
+
+
+$profile-theme-colors: (
+  "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
@@ -28,10 +79,24 @@ $themes-colors: (
   "dark":       $dark,
 
 ) !default;
-// "223, 86, 23"
-$themes-colors-rgb: (
-  "primary":    to-rgb($red),
+
+
+$theme-colors: ( //FIXME 這樣不會覆蓋
+  "primary":    $primary,
   "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+
+) !default;
+
+//自己暫時新增
+$profile-theme-colors-rgb: ( 
+  "primary":    to-rgb($primary),
+  "secondary":   to-rgb($secondary),
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -43,23 +108,37 @@ $themes-colors-rgb: (
   // Colors
   //
   // Generate palettes for full colors, grays, and theme colors.
+  //from root.scss 預設是 theme-colors 但無法取代？？？
 
-  @each $color, $value in $colors {
+  @each $color, $value in $colors {//同樣$colors 無法被覆蓋 ->debug 可以看到還是生成原本的變數
     --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $profile-colors {//同樣$colors 無法被覆蓋 改成自己擁有的 ＄profile-colors 成功
+    --#{$prefix}#{$color}: #{$value};
+  }
+  //新增 rgb 生成
+  @each $color, $value in $profile-colors-rgb {
+    --#{$prefix}#{$color}-rgb: #{$value};
   }
 
   // @each $color, $value in $grays {
   //   --#{$prefix}gray-#{$color}: #{$value};
   // }
 
-  @each $color, $value in $themes-colors {
+  @each $color, $value in $profile-theme-colors {
     --#{$prefix}#{$color}: #{$value};
   }
 
-  @each $color, $value in $themes-colors-rgb {
+  @each $color, $value in $profile-theme-colors-rgb {
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
+  //from button.scss 預設是 theme-colors 但無法取代？
+  @each $color, $value in $profile-theme-colors {
+    .btn-outline-#{$color} {
+      @include button-outline-variant($value);
+    }
+  }
   // @each $color, $value in $theme-colors-text {
   //   --#{$prefix}#{$color}-text-emphasis: #{$value};
   // }
