@@ -49,10 +49,7 @@
                 <span class="fs-6  text-secondary ">Taiwan</span>
               </h1>
             </div>
-            <div class="mt-2 mb-3 ">Having years of experience in backend development, I am currently expanding my skill
-              set by acquiring
-              frontend skills. Continuously learning and passionate about exploring new tools that can enhance
-              efficiency.</div>
+            <div class="mt-2 mb-3 ">擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索可以提高效率的應用工具。</div>
 
             <div class="row row-cols-1 row-cols-md-2  text-black g-2" style="font-size:14px;">
               <div class="col d-flex ">
@@ -84,7 +81,7 @@
             <div class="icon"> <img src="@/assets/icons/icon_be.svg" alt="icon_be"></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase ">Backend </h6>
-              <span class="fs-7 text-gray fw-lighter  ">I have years of experience with</span>
+              <span class="fs-7 text-gray fw-lighter  ">擁有多年的經驗</span>
               <div class="d-flex mt-1">
                 <div class="icon"> <img class="icon-image " src="@/assets/images/img_go.png" alt="icon"> </div>
                 <div class="icon"> <img class="icon-image " src="@/assets/images/img_mongo.png" alt="icon"></div>
@@ -98,7 +95,7 @@
             <div class="icon"> <img src="@/assets/icons/icon_fe.svg" alt="icon_fe"></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase ">Frontend </h6>
-              <span class="fs-7 text-gray fw-lighter">I've had experiences with</span>
+              <span class="fs-7 text-gray fw-lighter">能勝任使用</span>
               <div class="d-flex mt-1">
                 <div class="icon"> <img class="icon-image " src="@/assets/images/img_js.png" alt="icon"> </div>
                 <div class="icon"> <img class="icon-image " src="@/assets/images/img_vue.png" alt="icon"></div>
@@ -112,7 +109,7 @@
             <div class="icon"> <img src="@/assets/icons/icon_devops.svg" alt="icon_devops"></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase ">DevOps </h6>
-              <span class="fs-7 text-gray fw-lighter">Competent in using </span>
+              <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
               <div class="d-flex mt-1">
                 <div class="icon"> <img class="icon-image" src="@/assets/images/img_docker.png" alt="icon"> </div>
                 <div class="icon"> <img class="icon-image" src="@/assets/images/img_k8s.png" alt="icon"></div>
@@ -126,7 +123,7 @@
             <div class="icon"> <img src="@/assets/icons/icon_tools.svg" alt="icon_tools"></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase ">Platform / Tools </h6>
-              <span class="fs-7 text-gray fw-lighter">Competent in using </span>
+              <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
               <div class="d-flex mt-1">
                 <div class="icon"> <img class="icon-image" src="@/assets/images/img_git.png" alt="icon"> </div>
                 <div class="icon"> <img class="icon-image" src="@/assets/images/img_postman.png" alt="icon"></div>
@@ -142,11 +139,11 @@
           <div class="outline-border p-4 h-100">
             <h6 class="fw-bolder ">Backend Development </h6>
             <ul class="fw-lighter ">
-              <li>Familiar with <em>Restful API </em>and various OT communication protocols.</li>
-              <li>Familiar with <em>Golang</em> programming language. </li>
-              <li>Competent in <em>SQL/NoSQL</em> database management operations.</li>
-              <li>Competent in <em>Docker/Kubernetes</em> concepts.</li>
-              <li>Competent in <em>Git</em> version control experience.</li>
+              <li>熟悉 <em>Restful API </em>和多種 OT 通訊協定</li>
+              <li>熟悉 <em>Golang</em> 程式語言 </li>
+              <li>具備 <em>SQL/NoSQL</em> 資料庫管理操作。</li>
+              <li>具備 <em>Docker/Kubernetes</em> 管理操作</li>
+              <li>具備 <em>Git</em> 版本控管經驗</li>
             </ul>
           </div>
 
@@ -155,23 +152,23 @@
           <div class="outline-border p-4 h-100">
             <h6 class="fw-bolder "> Frontend Development </h6>
             <ul class="fw-lighter ">
-              <li>Capable of <em>JavaScript, CSS, HTML.</em></li>
-              <li>Capable of <em>React</em> front-end framework. </li>
-              <li>Capable of <em>Vue</em> front-end framework.</li>
-              <li>Capable of writing with <em>Tailwind CSS/Bootstrap.</em></li>
-              <li>Familiar with <em>integrating and handling errors with backend.</em></li>
+              <li>具備 <em>JavaScript, CSS, HTML</em></li>
+              <li>具備 <em>React</em>前端框架 </li>
+              <li>具備 <em>Vue</em>前端框架</li>
+              <li>具備使用 <em>Tailwind CSS/Bootstrap 撰寫</em></li>
+              <li>熟悉與 <em>後端整合</em></li>
             </ul>
           </div>
 
         </div>
         <div class="col-12 col-md-4">
           <div class="outline-border p-4  h-100">
-            <h6 class="fw-bolder ">Backend Development </h6>
+            <h6 class="fw-bolder "> work and study about </h6>
             <ul class="fw-lighter ">
-              <li>Coding <em>SCSS / CSS3</em></li>
-              <li>Coding <em>TypeScript</em> </li>
-              <li>Studying <em>Nuxt 3</em> basics</li>
-              <li>Studying <em>User Experience.</em></li>
+              <li>研究 <em>SCSS / CSS3</em></li>
+              <li>研究 <em>TypeScript</em> </li>
+              <li>研究 <em>Nuxt 3</em> basics</li>
+              <li>研究 <em>User Experience.</em></li>
 
             </ul>
           </div>
@@ -201,7 +198,7 @@
 
 
 <script setup lang="ts">
-import { ref } from 'vue';
+
 import CircleImage from '@/components/Lab/CircleImage.vue'
 import WorkItem from '@/components/Lab/WorkItem.vue'
 import { works } from '@/utils/config/works'
@@ -235,5 +232,6 @@ header {
 em {
   color: var(--bs-secondary);
   font-weight: 700;
+  margin-right: .2rem;
 }
 </style>
