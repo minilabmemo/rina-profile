@@ -1,6 +1,29 @@
 <template>
-  <div class="d-fex justify-content-center ">
-    <div class="text-ps-orange"></div> {{ item.date }}
+  <div class="d-flex flex-column align-items-center  justify-content-center p-3">
+    <div class="text-primary fw-bolder fs-5 ">{{ item.date }}</div>
+    <div class="bg-red-100 p-3 d-flex flex-column align-items-center ">
+      <div class="text-black fs-4 fw-bolder my-2  ">{{ item.title }}</div>
+      <div class="" style="max-width: 200px"> <img :src="item.img" alt="work" class="flex-image ">
+      </div>
+      <div class="d-flex   flex-wrap align-items-center   gap-2 my-3 " style="height: 3rem">
+        <span style="min-width: 3rem" :class="tagColor(tag)" class="px-2  fw-bolder text-white text-center "
+          v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+      </div>
+
+      <div class="align-self-start fw-bolder " style="height: 6.25rem">
+        <ul>
+          <li class="" v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
+        </ul>
+      </div>
+      <div class="w-100 d-flex justify-content-evenly     mt-2 fs-5 fw-bolder ">
+        <span class="nav-link" v-if="item.website"> <a :href="item.website" class="text-secondary " target="_blank"> <i
+              class="bi bi-globe"></i>
+            website</a> </span>
+        <span class=""> <a :href="item.repository" class="text-secondary" target="_blank"><i class="bi bi-github"></i>
+            repository</a>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -8,16 +31,29 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { tagColors } from '@/utils/config/works'
+import type { Iwork } from '@/utils/config/works';
+
 const props = defineProps<{
-  item: {
-    id: number;
-    date: string;
-    title: string;
-    tags: string[];
-    details: string[];
-  };
+  item: Iwork;
 }>();
 
-console.log('title', props.item.title);
-
+function tagColor(tag: string): string {
+  tag = tag.toLowerCase()
+  if (tag in tagColors) {
+    return tagColors[tag];
+  } else {
+    return 'bg-gray';
+  }
+}
 </script>
+
+
+<style lang="css" scoped>
+.flex-image {
+  object-fit: contain;
+  aspect-ratio: 3/2;
+  width: 100%;
+  height: auto;
+}
+</style>

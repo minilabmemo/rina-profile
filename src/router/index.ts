@@ -3,6 +3,15 @@ import HomeView from '../views/HomeView.vue'
 import NotFound from '../views/Base/NotFound.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash
+      }
+    } else {
+      return { top: 0 }
+    }
+  },
   routes: [
     { path: '/:pathMatch(.*)', component: NotFound },
     {

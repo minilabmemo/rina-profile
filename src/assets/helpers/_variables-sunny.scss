@@ -9,31 +9,46 @@
 
 [data-bs-theme="sunny"] {
   
+@import "node_modules/bootstrap/scss/variables";
+
 $primary:#DD8560 ;
 $secondary:#A37875;
 $black:#362F2F ;
 $gray:#595555;
 
 $colors : ( 
-  "blue":       $blue ,
-  "indigo":     $indigo,
-  "purple":     $purple,
+  "blue":       #3451b2 ,
+  "indigo":     #4b32c3,
+  "purple":     #7952b3,
   "pink":       $pink,
   "red":        $red,
   "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
+  "yellow":     #ffd859,
+  "green":      #42b883,
+  "teal":       #087EA4,
+  "cyan":       #0ea5e9,
   "black":      $black ,
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800
 ) ;
+$reds: (
+  "red-100": #FCF9F9,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900
+) ;
+$colors: map-merge($colors, $reds);
+$theme-colors: map-merge($theme-colors, $reds);
 
 
-//寫在哪？
-$colors-rgb: map-loop($colors, to-rgb, "$value") !default;
+// utilities-colors
+
 
 
 $theme-colors: (
@@ -48,8 +63,20 @@ $theme-colors: (
 
 ) ;
 
+
+
+//map-loop  to-rgb
+//寫在哪？
+$colors-rgb: map-loop($colors, to-rgb, "$value") ;
+
+//@import "node_modules/bootstrap/scss/maps"; //直接引入沒用？
+
 //from _maps.scss rgb
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") ;
+
+
+
+
 
 
   // Colors
@@ -76,12 +103,9 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  //from button.scss 還是要自己加入這段
-  @each $color, $value in $theme-colors {
-    .btn-outline-#{$color} {
-      @include button-outline-variant($value);
-    }
-  }
+  //from buttons.scss 產生 btn-outline btn- 樣式
+  @import "node_modules/bootstrap/scss/buttons";
+
   // @each $color, $value in $theme-colors-text {
   //   --#{$prefix}#{$color}-text-emphasis: #{$value};
   // }

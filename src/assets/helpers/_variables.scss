@@ -1766,5 +1766,11 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $theme-colors: map-merge($theme-colors, $oranges);//oranges BS 上面已有定義
 $theme-colors: map-merge($theme-colors, $grays);
+
+//temp add for theme sunny
+$theme-colors: map-merge($theme-colors, $reds) ;
+$theme-colors: map-merge($theme-colors, $colors);
+
+
 //自訂義 colors map end//
 
