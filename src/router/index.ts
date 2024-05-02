@@ -1,6 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import NotFound from '../views/Base/NotFound.vue'
+import { useFavicon } from '@vueuse/core'
+
+const icon = useFavicon()
+const profileFavIcon = 'profile_logo.ico'
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   scrollBehavior(to) {
@@ -30,6 +35,10 @@ const router = createRouter({
     {
       path: '/lab',
       name: 'lab',
+      meta: {
+        title: 'My Profile | Software Engineer!',
+        icon: profileFavIcon
+      },
       children: [
         {
           path: 'about',
@@ -122,5 +131,14 @@ const router = createRouter({
     }
   ]
 })
-
+router.afterEach((to) => {
+  if (to.meta.title) {
+    document.title = to.meta.title as string
+  }
+  if (to.meta.icon) {
+    icon.value = to.meta.icon as string
+  } else {
+    icon.value = ''
+  }
+})
 export default router

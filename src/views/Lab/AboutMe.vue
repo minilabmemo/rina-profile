@@ -2,8 +2,8 @@
   <div class="container-xl manrope-font mt-5 " data-bs-theme="sunny">
     <header class=" position-sticky top-0 bg-white">
       <nav class="navbar  ">
-        <div class="flex-grow-1  d-flex justify-content-between align-items-center ">
-          <a class="navbar-brand" href="#">
+        <div class="flex-grow-1  d-flex justify-content-between align-items-center flex-wrap  ">
+          <a class="navbar-brand" href="#/lab/about">
             <div class="d-flex align-items-center gap-2 ">
               <img src="@/assets/icons/profile_logo.svg" alt="profile_logo">
               <span class="fw-bolder text-primary fs-2  text-uppercase">Welcome!</span>
@@ -49,7 +49,7 @@
                 <span class="fs-6  text-secondary ">Taiwan</span>
               </h1>
             </div>
-            <div class="mt-2 mb-3 ">擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索可以提高效率的應用工具。</div>
+            <div class="mt-2 mb-3 text-secondary ">擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索可以提高效率的應用工具。</div>
 
             <div class="row row-cols-1 row-cols-md-2  text-black g-2" style="font-size:14px;">
               <div class="col d-flex ">
@@ -141,7 +141,7 @@
             <ul class="fw-lighter ">
               <li>熟悉 <em>Restful API </em>和多種 OT 通訊協定</li>
               <li>熟悉 <em>Golang</em> 程式語言 </li>
-              <li>具備 <em>SQL/NoSQL</em> 資料庫管理操作。</li>
+              <li>具備 <em>SQL/NoSQL</em> 資料庫管理操作</li>
               <li>具備 <em>Docker/Kubernetes</em> 管理操作</li>
               <li>具備 <em>Git</em> 版本控管經驗</li>
             </ul>
@@ -155,8 +155,8 @@
               <li>具備 <em>JavaScript, CSS, HTML</em></li>
               <li>具備 <em>React</em>前端框架 </li>
               <li>具備 <em>Vue</em>前端框架</li>
-              <li>具備使用 <em>Tailwind CSS/Bootstrap 撰寫</em></li>
-              <li>熟悉與 <em>後端整合</em></li>
+              <li>具備使用 <em>Tailwind /Bootstrap </em>撰寫樣式</li>
+
             </ul>
           </div>
 
@@ -167,8 +167,8 @@
             <ul class="fw-lighter ">
               <li>研究 <em>SCSS / CSS3</em></li>
               <li>研究 <em>TypeScript</em> </li>
-              <li>研究 <em>Nuxt 3</em> basics</li>
-              <li>研究 <em>User Experience.</em></li>
+              <li>學習 <em>Nuxt 3</em> 架構</li>
+              <li>學習 <em>User Experience</em></li>
 
             </ul>
           </div>
