@@ -9,12 +9,13 @@ export interface Iwork {
   details: string[]
   isHide?: boolean
 }
+import imgUrl from '../../assets/images/work-ec.png'
 
 export const works: Iwork[] = [
   {
     date: '2024/05',
     title: '電子商務購物網站',
-    img: '../../assets/images/work-ec.png',
+    img: imgUrl,
     tags: ['vue', 'bootstrap', 'pinia', 'vite', 'eslint', 'cypress'],
     website: 'https://minilabmemo.github.io/f2e-ec-store/#/',
     repository: 'https://github.com/minilabmemo/f2e-ec-store',
