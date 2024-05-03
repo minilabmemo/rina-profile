@@ -4,7 +4,7 @@
     <div class="bg-primary   " style="height: 5px;width: 100px;"></div>
     <div class=" content-item mt-1 p-3 d-flex flex-column align-items-center ">
       <div class="text-black fs-4 fw-bolder my-2  ">{{ item.title }}</div>
-      <div class="" style="max-width: 200px"> <img :src="item.img" alt="work" class="flex-image ">
+      <div class="" style="max-width: 200px"> <img :src="getImage(item.img)" alt="work" class="flex-image ">
       </div>
       <div class="d-flex   flex-wrap align-items-center   gap-2 my-3 " style="height: 3rem">
         <span style="min-width: 3rem" :class="tagColor(tag)" class="px-2  fw-bolder text-white text-center "
@@ -48,6 +48,13 @@ function tagColor(tag: string): string {
     return 'bg-gray';
   }
 }
+function getImage(imgLoc: string): string {
+  const imageUrl: string = new URL(imgLoc, import.meta.url).href
+  return imageUrl
+
+}
+
+
 </script>
 
 

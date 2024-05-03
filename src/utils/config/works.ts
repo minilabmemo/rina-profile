@@ -14,7 +14,7 @@ export const works: Iwork[] = [
   {
     date: '2024/05',
     title: '電子商務購物網站',
-    img: '/src/assets/images/work-ec.png',
+    img: '../../assets/images/work-ec.png',
     tags: ['vue', 'bootstrap', 'pinia', 'vite', 'eslint', 'cypress'],
     website: 'https://minilabmemo.github.io/f2e-ec-store/#/',
     repository: 'https://github.com/minilabmemo/f2e-ec-store',
