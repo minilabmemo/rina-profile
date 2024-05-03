@@ -1,7 +1,7 @@
 <template>
-  <div class="d-flex flex-column align-items-center  justify-content-center p-3 work-item">
+  <div class="d-flex flex-column align-items-center  justify-content-center p-3 work-item m-3">
     <div class="text-primary fw-bolder fs-5 ">{{ item.date }}</div>
-    <div class="bg-primary   " style="height: 5px;width: 100px;"></div>
+    <div class="bg-primary  title-line " style="height: 5px;"></div>
     <div class=" content-item mt-1 p-3 d-flex flex-column align-items-center ">
       <div class="text-black fs-4 fw-bolder my-2  ">{{ item.title }}</div>
       <div class="" style="max-width: 200px"> <img :src="getImage(item.img)" alt="work" class="flex-image ">
@@ -64,13 +64,23 @@ function getImage(imgLoc: string): string {
 
 }
 
-.content-item {
+.work-item {
   background-color: var(--bs-red-100);
 }
 
-.work-item:hover .content-item {
+.work-item:hover {
   background-color: var(--bs-red-200);
 }
+
+.title-line {
+  transition: width .5s ease-in;
+  width: 0px;
+}
+
+.work-item:hover .title-line {
+  width: 100px;
+}
+
 
 .work-item:hover img {
   transform: scale(1.1);
