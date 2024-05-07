@@ -83,9 +83,16 @@
               <h6 class="fw-bolder text-uppercase ">Backend </h6>
               <span class="fs-7 text-gray fw-lighter  ">擁有多年的經驗</span>
               <div class="d-flex mt-1">
-                <div class="icon"> <img class="icon-image " src="@/assets/images/img_go.png" alt="icon"> </div>
-                <div class="icon"> <img class="icon-image " src="@/assets/images/img_mongo.png" alt="icon"></div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_vi.png" alt="icon"></div>
+                <div class="icon  my-tooltip"> <img class="icon-image " src="@/assets/images/img_go.png" alt="icon">
+                  <span class="tooltiptext">Golang</span>
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image " src="@/assets/images/img_mongo.png" alt="icon">
+                  <span class="tooltiptext">Mongo</span>
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_vi.png" alt="icon">
+                  <span class="tooltiptext">Vi</span>
+
+                </div>
               </div>
             </div>
           </div>
@@ -97,10 +104,22 @@
               <h6 class="fw-bolder text-uppercase ">Frontend </h6>
               <span class="fs-7 text-gray fw-lighter">能勝任使用</span>
               <div class="d-flex mt-1">
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_js.png" alt="icon"> </div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_react.png" alt="icon"></div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_vue.png" alt="icon"></div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_tw.png" alt="icon"></div>
+                <div class="icon my-tooltip">
+                  <img class="icon-image" src="@/assets/images/img_js.png" alt="icon">
+                  <span class="tooltiptext">Javascript</span>
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_react.png" alt="icon">
+                  <span class="tooltiptext">React</span>
+
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_vue.png" alt="icon">
+                  <span class="tooltiptext">Vue</span>
+
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_tw.png" alt="icon">
+                  <span class="tooltiptext">Tailwind CSS</span>
+
+                </div>
               </div>
             </div>
           </div>
@@ -112,9 +131,17 @@
               <h6 class="fw-bolder text-uppercase ">DevOps </h6>
               <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
               <div class="d-flex mt-1">
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_docker.png" alt="icon"> </div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_k8s.png" alt="icon"></div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_grafana.png" alt="icon"></div>
+                <div class="icon my-tooltip"> <img class="icon-image " src="@/assets/images/img_docker.png" alt="icon">
+                  <span class="tooltiptext">docker</span>
+                </div>
+
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_k8s.png" alt="icon">
+                  <span class="tooltiptext">Kubernetes</span>
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_grafana.png" alt="icon">
+                  <span class="tooltiptext">Grafana</span>
+
+                </div>
               </div>
             </div>
           </div>
@@ -126,8 +153,14 @@
               <h6 class="fw-bolder text-uppercase ">Platform / Tools </h6>
               <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
               <div class="d-flex mt-1">
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_git.png" alt="icon"> </div>
-                <div class="icon"> <img class="icon-image" src="@/assets/images/img_postman.png" alt="icon"></div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_git.png" alt="icon">
+                  <span class="tooltiptext">Git</span>
+
+                </div>
+                <div class="icon my-tooltip"> <img class="icon-image" src="@/assets/images/img_postman.png" alt="icon">
+                  <span class="tooltiptext">Postman</span>
+
+                </div>
 
               </div>
             </div>
@@ -234,5 +267,28 @@ em {
   color: var(--bs-secondary);
   font-weight: 700;
   margin-right: .2rem;
+}
+
+.my-tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.my-tooltip .tooltiptext {
+  visibility: hidden;
+
+  background-color: rgba(var(--bs-secondary-rgb));
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 5px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.my-tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 </style>
