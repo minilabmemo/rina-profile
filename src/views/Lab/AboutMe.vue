@@ -49,7 +49,7 @@
                 <span class="fs-6  text-secondary ">Taiwan</span>
               </h1>
             </div>
-            <div class="mt-2 mb-3 text-secondary ">擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索可以提高效率的應用工具。</div>
+            <div class="mt-2 mb-3 text-secondary ">擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索有趣且可以提高效率的應用工具。</div>
 
             <div class="row row-cols-1 row-cols-md-2  text-black g-2" style="font-size:14px;">
               <div class="col d-flex ">
@@ -97,9 +97,10 @@
               <h6 class="fw-bolder text-uppercase ">Frontend </h6>
               <span class="fs-7 text-gray fw-lighter">能勝任使用</span>
               <div class="d-flex mt-1">
-                <div class="icon"> <img class="icon-image " src="@/assets/images/img_js.png" alt="icon"> </div>
-                <div class="icon"> <img class="icon-image " src="@/assets/images/img_vue.png" alt="icon"></div>
-                <div class="icon"> <img class="icon-image " src="@/assets/images/img_react.png" alt="icon"></div>
+                <div class="icon"> <img class="icon-image" src="@/assets/images/img_js.png" alt="icon"> </div>
+                <div class="icon"> <img class="icon-image" src="@/assets/images/img_react.png" alt="icon"></div>
+                <div class="icon"> <img class="icon-image" src="@/assets/images/img_vue.png" alt="icon"></div>
+                <div class="icon"> <img class="icon-image" src="@/assets/images/img_tw.png" alt="icon"></div>
               </div>
             </div>
           </div>
@@ -155,7 +156,7 @@
               <li>具備 <em>JavaScript, CSS, HTML</em></li>
               <li>具備 <em>React</em>前端框架 </li>
               <li>具備 <em>Vue</em>前端框架</li>
-              <li>具備使用 <em>Tailwind /Bootstrap </em>撰寫樣式</li>
+              <li>具備使用 <em>Tailwind CSS/Bootstrap </em>撰寫</li>
 
             </ul>
           </div>

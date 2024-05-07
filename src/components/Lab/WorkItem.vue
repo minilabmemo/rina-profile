@@ -41,7 +41,7 @@ const props = defineProps<{
 }>();
 
 function tagColor(tag: string): string {
-  tag = tag.toLowerCase()
+  tag = tag.toLowerCase().replace(" ", "")
   if (tag in tagColors) {
     return tagColors[tag];
   } else {
