@@ -65,10 +65,8 @@ function tagColor(tag: string): string {
 const cardStyle = ref({
   transform: 'rotateY(0deg) rotateX(0deg)'
 })
-function handleMouseMove(event) {
-  console.log('handleMouseMove')
-
-  const card = event.currentTarget.querySelector('.card')
+function handleMouseMove(event: MouseEvent) {
+  const card = event.currentTarget as HTMLElement
   const rect = card.getBoundingClientRect()
   const x = event.clientX - rect.left
   const y = event.clientY - rect.top
@@ -82,7 +80,7 @@ function handleMouseMove(event) {
   }
 }
 
-function handleMouseLeave(event) {
+function handleMouseLeave() {
   cardStyle.value = {
     transform: 'rotateY(0deg) rotateX(0deg)'
   }
