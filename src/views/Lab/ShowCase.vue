@@ -1,5 +1,6 @@
 <template>
   <div><CardEffect></CardEffect></div>
+  <div><CardEffect></CardEffect></div>
 </template>
 
 <script setup lang="ts">

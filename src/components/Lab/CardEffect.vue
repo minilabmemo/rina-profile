@@ -2,7 +2,6 @@
   <div class="card-container" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
     <div class="card" :style="cardStyle">
       <div class="card-content">
-        <!-- 卡片的內容放在這裡 -->
         <h3>這是一張卡片</h3>
         <p>當滑鼠移動到卡片上時，卡片會根據滑鼠的位置旋轉。</p>
       </div>
@@ -46,13 +45,10 @@ export default {
 <style scoped>
 .card-container {
   perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* 可以根據需要調整容器高度 */
 }
 
 .card {
+  margin: 10px;
   width: 300px; /* 卡片寬度 */
   height: 200px; /* 卡片高度 */
   background-color: #fff;
