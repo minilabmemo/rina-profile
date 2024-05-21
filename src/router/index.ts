@@ -47,6 +47,10 @@ const router = createRouter({
         {
           path: 'flex',
           component: () => import('../views/Lab/FlexView.vue')
+        },
+        {
+          path: 'show',
+          component: () => import('../views/Lab/ShowCase.vue')
         }
       ]
     },
