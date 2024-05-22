@@ -90,7 +90,7 @@ export const works: Iwork[] = [
     date: '2023/10',
     title: '電子書關鍵字速查 ',
     img: imgEBook,
-    tags: ['Chrome extension', 'CSS', 'Javascript'],
+    tags: ['Chrome Extension', 'CSS', 'Javascript'],
     repository: ' https://github.com/minilabmemo/chrome-ext-find-ebook',
     details: ['Chrome 擴充功能插件', '快速找尋電子書關鍵字', '可自訂網址']
   }

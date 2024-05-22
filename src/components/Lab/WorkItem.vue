@@ -11,7 +11,7 @@
         <div class="" style="max-width: 200px">
           <img :src="item.img" alt="work" class="flex-image" />
         </div>
-        <div class="d-flex flex-wrap align-items-center gap-2 my-3" style="height: 3rem">
+        <div class="d-flex flex-wrap align-items-center gap-1 my-3" style="min-height: 3rem">
           <span
             style="min-width: 3rem"
             :class="tagColor(tag)"
@@ -22,7 +22,7 @@
           >
         </div>
 
-        <div class="align-self-start fw-bolder" style="height: 5.2rem">
+        <div class="align-self-start fw-bolder" style="min-height: 5.2rem">
           <ul>
             <li class="" v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
           </ul>

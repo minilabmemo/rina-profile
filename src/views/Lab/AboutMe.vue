@@ -48,46 +48,62 @@
       <div class="">
         <h1 class="fs-3 fw-bolder">about me</h1>
         <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
-        <div class="row justify-content-center my-4m py-5 outline-border item">
-          <div class="col-12 col-lg-3">
-            <CircleImage src="https://avatars.githubusercontent.com/u/112948083?v=4" />
-          </div>
-          <div class="col-12 col-lg-8">
-            <div>
-              <h1 class="me-2">
-                Rina Huang
-                <span> <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1" /></span>
-                <span class="fs-6 text-secondary">Taiwan</span>
-              </h1>
+        <div class="p-2">
+          <div class="row justify-content-center my-4m py-5 outline-border item">
+            <div class="col-12 col-lg-3">
+              <CircleImage src="https://avatars.githubusercontent.com/u/112948083?v=4" />
             </div>
-            <div class="mt-2 mb-3 text-secondary">
-              擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索有趣且可以提高效率的應用工具。
-            </div>
+            <div class="col-12 col-lg-8">
+              <div>
+                <h1 class="me-2">
+                  Rina Huang
+                  <span>
+                    <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1"
+                  /></span>
+                  <span class="fs-6 text-secondary">Taiwan</span>
+                </h1>
+              </div>
+              <div class="mt-2 mb-3 text-secondary">
+                擁有多年的後端開發經驗，我目前正在透過獲取前端技能來擴展我的技能。熱衷於探索有趣且可以提高效率的應用工具。
+              </div>
 
-            <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
-              <div class="col d-flex">
-                <a href="https://github.com/minilabmemo" class="nav-link d-inline" target="_blank">
-                  <img src="@/assets/icons/icon_github.svg" alt="icon_github" class="me-1" />
-                  <span>GITHUB : https://github.com/minilabmemo </span>
-                </a>
+              <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
+                <div class="col d-flex">
+                  <a
+                    href="https://github.com/minilabmemo"
+                    class="nav-link d-inline"
+                    target="_blank"
+                  >
+                    <img src="@/assets/icons/icon_github.svg" alt="icon_github" class="me-1" />
+                    <span>GITHUB : https://github.com/minilabmemo </span>
+                  </a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://minilabmemo.github.io/"
+                    class="nav-link d-inline"
+                    target="_blank"
+                  >
+                    <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
+                    <span>BLOG : https://minilabmemo.github.io/</span>
+                  </a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://www.instagram.com/minilab_memo/"
+                    class="nav-link d-inline"
+                    target="_blank"
+                  >
+                    <img
+                      src="@/assets/icons/icon_instagram.svg"
+                      alt="icon_instagram"
+                      class="me-1"
+                    />
+                    <span class="text-uppercase"> instagram : minilab_memo</span>
+                  </a>
+                </div>
+                <div class="col"></div>
               </div>
-              <div class="col">
-                <a href="https://minilabmemo.github.io/" class="nav-link d-inline" target="_blank">
-                  <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
-                  <span>BLOG : https://minilabmemo.github.io/</span>
-                </a>
-              </div>
-              <div class="col">
-                <a
-                  href="https://www.instagram.com/minilab_memo/"
-                  class="nav-link d-inline"
-                  target="_blank"
-                >
-                  <img src="@/assets/icons/icon_instagram.svg" alt="icon_instagram" class="me-1" />
-                  <span class="text-uppercase"> instagram : minilab_memo</span>
-                </a>
-              </div>
-              <div class="col"></div>
             </div>
           </div>
         </div>
@@ -96,7 +112,7 @@
     <section class="my-6 text-black" id="skills">
       <h1 class="fs-3 fw-bolder text-primary">skills</h1>
       <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
-      <div class="row justify-content-between g-3 mt-3">
+      <div class="row justify-content-between gy-3 mt-3">
         <div class="col-12 col-md-6 col-lg-3 p-2">
           <div class="d-flex gap-1 outline-border p-3 align-items-start item">
             <div class="icon"><img src="@/assets/icons/icon_be.svg" alt="icon_be" /></div>
@@ -192,7 +208,7 @@
         </div>
       </div>
 
-      <div class="row justify-content-between g-5 mt-3">
+      <div class="row justify-content-between gy-3 mt-3">
         <div class="col-12 col-md-4">
           <div class="outline-border p-4 h-100 item">
             <h6 class="fw-bolder">Backend Development</h6>
