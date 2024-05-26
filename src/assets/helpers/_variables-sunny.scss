@@ -43,10 +43,23 @@ $reds: (
   "red-800": $red-800,
   "red-900": $red-900
 ) ;
+
 $colors: map-merge($colors, $reds);
 $theme-colors: map-merge($theme-colors, $reds);
-
-
+$oranges: (
+  "orange":#fffaf0,
+  "orange-100": #FCF9F9,
+  "orange-200": #FCF9F9,
+  "orange-300": #fff0e6,
+  "orange-400": $orange-400,
+  "orange-500": #f9e1c4,
+  "orange-600": $orange-600,
+  "orange-700": $orange-700,
+  "orange-800": $orange-800,
+  "orange-900": #b19485
+) ;
+$colors: map-merge($colors, $oranges);
+$theme-colors: map-merge($theme-colors, $oranges);
 // utilities-colors
 
 

@@ -72,8 +72,8 @@ function handleMouseMove(event: MouseEvent) {
   const y = event.clientY - rect.top
   const halfWidth = rect.width / 2
   const halfHeight = rect.height / 2
-  const rotateX = ((y - halfHeight) / halfHeight) * 5
-  const rotateY = ((x - halfWidth) / halfWidth) * 5
+  const rotateX = ((y - halfHeight) / halfHeight) * 8
+  const rotateY = ((x - halfWidth) / halfWidth) * 8
 
   cardStyle.value = {
     transform: `rotateY(${rotateY}deg) rotateX(${-rotateX}deg)`
@@ -93,20 +93,36 @@ function handleMouseLeave() {
 }
 
 .card {
-  box-shadow: 0 10px 20px rgba(142, 142, 142, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 206, 174, 0.2);
+  border: 2px solid var(--bs-orange-900);
   transform-style: preserve-3d;
   transition: transform 0.1s ease-out;
 }
+
+.card::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  background: var(--bs-orange-500);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--bs-orange-900);
+  transform: translate3d(0, 0.75em, -1em);
+  transition:
+    transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
 .img-container {
   overflow: hidden;
 }
 
 .work-item {
   background-color: var(--bs-red-100);
-}
-
-.work-item:hover {
-  background-color: var(--bs-red-200);
 }
 
 .title-line {
