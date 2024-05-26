@@ -40,11 +40,15 @@
     <section class="my-6 text-primary" id="about">
       <div class="">
         <h1 class="fs-3 fw-bolder">about me</h1>
+
         <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
         <div class="p-2">
           <div class="row justify-content-center my-4m py-5 outline-border item">
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-3 position-relative">
               <CircleImage src="https://avatars.githubusercontent.com/u/112948083?v=4" />
+              <div class="position-absolute dialogue">
+                <TypingEffect />
+              </div>
             </div>
             <div class="col-12 col-lg-8">
               <div>
@@ -257,6 +261,7 @@
 import CircleImage from '@/components/Lab/CircleImage.vue'
 import WorkItem from '@/components/Lab/WorkItem.vue'
 import { works } from '@/utils/config/works'
+import TypingEffect from '@/components/Lab/TypingEffect.vue'
 </script>
 
 <style lang="css" scoped>
@@ -372,5 +377,11 @@ button.button-3d:active::before {
     0 0 0 2px var(--bs-orange-900),
     0 0 var(--bs-orange-200);
   transform: translate3d(0, 0, -1em);
+}
+
+.dialogue {
+  top: -30px;
+  left: 10px;
+  opacity: 0.7;
 }
 </style>
