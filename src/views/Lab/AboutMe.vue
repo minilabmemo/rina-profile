@@ -362,7 +362,7 @@ button.button-3d::before {
 }
 button.button-3d:hover {
   color: var(--bs-orange-900);
-  background: var(--bs-orange-500);
+  background: var(--bs-orange-300);
   transform: translate(0, 0.25em);
 }
 button.button-3d:hover::before {
