@@ -61,7 +61,7 @@
                 </h1>
               </div>
               <div class="mt-2 mb-3 text-secondary">
-                擁有多年的後端開發經驗，目前正在透過獲取前端技能擴展我的技能。熱衷於探索有趣的應用工具提升效率。
+                擁有多年的後端開發經驗，目前正在學習前端技能。熱衷於探索有趣的應用工具提升效率。
               </div>
 
               <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
@@ -366,7 +366,7 @@ button.button-3d:hover {
   transform: translate(0, 0.25em);
 }
 button.button-3d:hover::before {
-  background: var(--bs-primary);
+  background: var(--bs-orange-600);
   transform: translate3d(0, 0.5em, -1em);
 }
 button.button-3d:active {
