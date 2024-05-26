@@ -383,6 +383,5 @@ button.button-3d:active::before {
 .dialogue {
   top: -30px;
   left: 10px;
-  opacity: 0.7;
 }
 </style>

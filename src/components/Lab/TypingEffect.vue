@@ -58,7 +58,8 @@ export default defineComponent({
   position: relative;
   display: inline-block;
   padding: 8px 15px;
-  background-color: var(--bs-orange-100);
+  background-color: rgba(var(--bs-orange-100-rgb), 0.5);
+
   border: 1px solid var(--bs-orange-900);
   border-radius: 10px;
   font-family: 'Courier New', Courier, monospace;
