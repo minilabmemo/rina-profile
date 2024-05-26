@@ -34,14 +34,14 @@ $colors : (
 ) ;
 $reds: (
   "red-100": #FCF9F9,
-  "red-200": #ffece0,
+  "red-200": #fae1e1,
   "red-300": $red-300,
   "red-400": $red-400,
   "red-500": $red-500,
   "red-600": $red-600,
   "red-700": $red-700,
   "red-800": $red-800,
-  "red-900": $red-900
+  "red-900": #b18585
 ) ;
 
 $colors: map-merge($colors, $reds);
@@ -51,7 +51,7 @@ $oranges: (
   "orange-100": #FCF9F9,
   "orange-200": #FCF9F9,
   "orange-300": #fff0e6,
-  "orange-400": $orange-400,
+  "orange-400": #fff0e6,
   "orange-500": #f9e1c4,
   "orange-600": $orange-600,
   "orange-700": $orange-700,
