@@ -12,7 +12,7 @@ import { defineComponent, ref, onMounted } from 'vue'
 
 export default defineComponent({
   setup() {
-    const texts = ["Hi, I'm a software engineer.", 'Welcome Here!']
+    const texts = ['Welcome Here!', "Hi, I'm a software engineer."]
     const displayedText = ref('')
     const index = ref(0)
     const currentTextIndex = ref(0)
