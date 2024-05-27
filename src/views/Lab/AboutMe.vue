@@ -33,7 +33,7 @@
         </div>
       </nav>
       <div
-        class="bg-primary d-flex justify-content-center"
+        class="bg-primary d-flex justify-content-center mt-2"
         style="height: 1px; width: 100%; opacity: 0.4"
       ></div>
     </header>
@@ -43,7 +43,7 @@
 
         <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
         <div class="p-2">
-          <div class="row justify-content-center my-4m py-5 outline-border item">
+          <div class="row justify-content-center my-4m py-5 outline-border item gy-3">
             <div class="col-12 col-lg-3 position-relative">
               <CircleImage src="https://avatars.githubusercontent.com/u/112948083?v=4" />
               <div class="position-absolute dialogue">
