@@ -87,7 +87,7 @@
                 </div>
                 <div class="col">
                   <a
-                    href="https://www.instagram.com/minilab_memo/"
+                    href="https://www.instagram.com/minilabmemo/"
                     class="nav-link d-inline"
                     target="_blank"
                   >
@@ -96,7 +96,7 @@
                       alt="icon_instagram"
                       class="me-1"
                     />
-                    <span class="text-uppercase"> instagram : minilab_memo</span>
+                    <span class="text-uppercase"> instagram : minilabmemo</span>
                   </a>
                 </div>
                 <div class="col"></div>
@@ -237,6 +237,7 @@
               <li>研究 <em>TypeScript</em></li>
               <li>學習 <em>Nuxt 3</em> 架構</li>
               <li>學習 <em>User Experience</em></li>
+              <li>使用 <em>Google Firebase</em></li>
             </ul>
           </div>
         </div>
