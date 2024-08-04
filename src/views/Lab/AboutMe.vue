@@ -13,29 +13,25 @@
             <ul class="navbar-nav d-flex flex-row gap-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#/lab/about#about">
-                  <button type="button" class="button-3d fw-bolder fs-6 text-black">about</button>
+                  <button type="button" class="button-3d fw-bolder size-md text-black">about</button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#skills">
-                  <button type="button" class="button-3d fw-bolder fs-6 text-black">skills</button>
+                  <button type="button" class="button-3d fw-bolder size-md text-black">skills</button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#works">
-                  <button type="button" class="button-3d fw-bolder fs-6 text-black">
+                  <button type="button" class="button-3d fw-bolder size-md text-black">
                     works
-                  </button></a
-                >
+                  </button></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div
-        class="bg-primary d-flex justify-content-center mt-2"
-        style="height: 1px; width: 100%; opacity: 0.4"
-      ></div>
+      <div class="bg-primary d-flex justify-content-center mt-2" style="height: 1px; width: 100%; opacity: 0.4"></div>
     </header>
     <section class="my-6 text-primary" id="about">
       <div class="">
@@ -55,8 +51,7 @@
                 <h1 class="me-2">
                   Rina Huang
                   <span>
-                    <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1"
-                  /></span>
+                    <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1" /></span>
                   <span class="fs-6 text-secondary">Taiwan</span>
                 </h1>
               </div>
@@ -66,36 +61,20 @@
 
               <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
                 <div class="col d-flex">
-                  <a
-                    href="https://github.com/minilabmemo"
-                    class="nav-link d-inline"
-                    target="_blank"
-                  >
+                  <a href="https://github.com/minilabmemo" class="nav-link d-inline" target="_blank">
                     <img src="@/assets/icons/icon_github.svg" alt="icon_github" class="me-1" />
                     <span>GITHUB : https://github.com/minilabmemo </span>
                   </a>
                 </div>
                 <div class="col">
-                  <a
-                    href="https://minilabmemo.github.io/"
-                    class="nav-link d-inline"
-                    target="_blank"
-                  >
+                  <a href="https://minilabmemo.github.io/" class="nav-link d-inline" target="_blank">
                     <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
                     <span>BLOG : https://minilabmemo.github.io/</span>
                   </a>
                 </div>
                 <div class="col">
-                  <a
-                    href="https://www.instagram.com/minilabmemo/"
-                    class="nav-link d-inline"
-                    target="_blank"
-                  >
-                    <img
-                      src="@/assets/icons/icon_instagram.svg"
-                      alt="icon_instagram"
-                      class="me-1"
-                    />
+                  <a href="https://www.instagram.com/minilabmemo/" class="nav-link d-inline" target="_blank">
+                    <img src="@/assets/icons/icon_instagram.svg" alt="icon_instagram" class="me-1" />
                     <span class="text-uppercase"> instagram : minilabmemo</span>
                   </a>
                 </div>
@@ -115,7 +94,7 @@
             <div class="icon"><img src="@/assets/icons/icon_be.svg" alt="icon_be" /></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase">Backend</h6>
-              <span class="fs-7 text-gray fw-lighter">擁有多年的經驗</span>
+
               <div class="d-flex mt-1">
                 <div class="icon my-tooltip">
                   <img class="icon-image" src="@/assets/images/img_go.png" alt="icon" />
@@ -138,7 +117,7 @@
             <div class="icon"><img src="@/assets/icons/icon_fe.svg" alt="icon_fe" /></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase">Frontend</h6>
-              <span class="fs-7 text-gray fw-lighter">能勝任使用</span>
+
               <div class="d-flex mt-1">
                 <div class="icon my-tooltip">
                   <img class="icon-image" src="@/assets/images/img_js.png" alt="icon" />
@@ -165,7 +144,7 @@
             <div class="icon"><img src="@/assets/icons/icon_devops.svg" alt="icon_devops" /></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase">DevOps</h6>
-              <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
+
               <div class="d-flex mt-1">
                 <div class="icon my-tooltip">
                   <img class="icon-image" src="@/assets/images/img_docker.png" alt="icon" />
@@ -189,7 +168,7 @@
             <div class="icon"><img src="@/assets/icons/icon_tools.svg" alt="icon_tools" /></div>
             <div class="border-start ps-2">
               <h6 class="fw-bolder text-uppercase">Platform / Tools</h6>
-              <span class="fs-7 text-gray fw-lighter">能勝任使用 </span>
+
               <div class="d-flex mt-1">
                 <div class="icon my-tooltip">
                   <img class="icon-image" src="@/assets/images/img_git.png" alt="icon" />
@@ -331,6 +310,7 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
+
 button.button-3d {
   font-weight: 600;
   color: #382b22;
@@ -344,6 +324,7 @@ button.button-3d {
     transform 150ms cubic-bezier(0, 0, 0.58, 1),
     background 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.button-3d::before {
   position: absolute;
   content: '';
@@ -361,19 +342,23 @@ button.button-3d::before {
     transform 150ms cubic-bezier(0, 0, 0.58, 1),
     box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.button-3d:hover {
   color: var(--bs-orange-900);
   background: var(--bs-orange-300);
   transform: translate(0, 0.25em);
 }
+
 button.button-3d:hover::before {
   background: var(--bs-orange-600);
   transform: translate3d(0, 0.5em, -1em);
 }
+
 button.button-3d:active {
   background: var(--bs-orange-500);
   transform: translate(0em, 0.75em);
 }
+
 button.button-3d:active::before {
   box-shadow:
     0 0 0 2px var(--bs-orange-900),
@@ -384,5 +369,9 @@ button.button-3d:active::before {
 .dialogue {
   top: -30px;
   left: 10px;
+}
+
+.size-md {
+  font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 }
 </style>
