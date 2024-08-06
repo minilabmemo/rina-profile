@@ -50,18 +50,6 @@ export const works: Iwork[] = [
   },
 
   {
-    date: '2023/11',
-    title: '薩卡班甲魚官網 ',
-    img: imgMeow,
-    tags: ['React', 'Typescript', 'Tailwind CSS'],
-    website: 'https://minilabmemo.github.io/f2e-election-meowsakka/',
-    repository: 'https://github.com/minilabmemo/f2e-election-meowsakka',
-    details: [
-      'The F2E 六角學院 修煉精神光屋 2023 Mission 1 - 立委競選官網',
-      '立委個人資訊介紹 - 示範網頁'
-    ]
-  },
-  {
     date: '2023/12',
     title: '即時開票全台地圖 ',
     img: imgTW,
@@ -87,10 +75,23 @@ export const works: Iwork[] = [
     ]
   },
   {
+    date: '2023/11',
+    title: '薩卡班甲魚 web 官網 ',
+    img: imgMeow,
+    tags: ['React', 'Typescript', 'Tailwind CSS'],
+    website: 'https://minilabmemo.github.io/f2e-election-meowsakka/',
+    repository: 'https://github.com/minilabmemo/f2e-election-meowsakka',
+    details: [
+      'The F2E 六角學院 修煉精神光屋 2023 Mission 1 - 立委競選官網',
+      '立委個人資訊介紹 - 示範網頁'
+    ]
+  },
+  {
     date: '2023/10',
     title: '電子書關鍵字速查 ',
     img: imgEBook,
     tags: ['Chrome Extension', 'CSS', 'Javascript'],
+
     repository: ' https://github.com/minilabmemo/chrome-ext-find-ebook',
     details: ['Chrome 擴充功能插件', '快速找尋電子書關鍵字', '可自訂網址']
   }

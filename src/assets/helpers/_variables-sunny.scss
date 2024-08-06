@@ -22,7 +22,7 @@ $colors : (
   "purple":     #7952b3,
   "pink":       $pink,
   "red":        $red,
-  "orange":     $orange,
+  "orange":     #ff8e59,
   "yellow":     #ffd859,
   "green":      #42b883,
   "teal":       #087EA4,
@@ -47,7 +47,7 @@ $reds: (
 $colors: map-merge($colors, $reds);
 $theme-colors: map-merge($theme-colors, $reds);
 $oranges: (
-  "orange":#fffaf0,
+  "orange":#ff8e59,
   "orange-100": #FCF9F9,
   "orange-200": #FCF9F9,
   "orange-300": #fff0e6,

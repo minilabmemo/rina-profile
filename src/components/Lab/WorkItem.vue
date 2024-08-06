@@ -1,9 +1,6 @@
 <template>
   <div class="card-container" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
-    <div
-      :style="cardStyle"
-      class="card d-flex flex-column align-items-center justify-content-center p-3 work-item m-3"
-    >
+    <div :style="cardStyle" class="card d-flex flex-column align-items-center justify-content-center p-3 work-item m-3">
       <div class="text-primary fw-bolder fs-5">{{ item.date }}</div>
       <div class="bg-primary title-line" style="height: 5px"></div>
       <div class="content-item mt-1 p-3 d-flex flex-column align-items-center">
@@ -12,14 +9,8 @@
           <img :src="item.img" alt="work" class="flex-image" />
         </div>
         <div class="d-flex flex-wrap align-items-center gap-1 my-3" style="min-height: 3rem">
-          <span
-            style="min-width: 3rem"
-            :class="tagColor(tag)"
-            class="px-2 fw-bolder text-white text-center"
-            v-for="tag in item.tags"
-            :key="tag"
-            >{{ tag }}</span
-          >
+          <span style="min-width: 3rem" :class="tagColor(tag)" class="px-2 fw-bolder text-white text-center"
+            v-for="tag in item.tags" :key="tag">{{ tag }}</span>
         </div>
 
         <div class="align-self-start fw-bolder" style="min-height: 5.2rem">
@@ -27,17 +18,15 @@
             <li class="" v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
           </ul>
         </div>
-        <div class="w-100 d-flex justify-content-evenly mt-1 fs-5 fw-bolder">
+        <div class="w-100 d-flex justify-content-evenly mt-1 fs-5 fw-bolder gap-1">
           <span class="nav-link" v-if="item.website">
             <a :href="item.website" class="text-secondary" target="_blank">
-              <i class="bi bi-globe"></i> website</a
-            >
+              <i class="bi bi-globe"></i> website</a>
           </span>
           <span class="">
             <a :href="item.repository" class="text-secondary" target="_blank">
               <i class="bi bi-github"></i>
-              repository</a
-            >
+              repository</a>
           </span>
         </div>
       </div>
