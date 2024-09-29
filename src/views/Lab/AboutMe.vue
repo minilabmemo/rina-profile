@@ -198,6 +198,7 @@
                   <li>具備 <em>SQL/NoSQL</em> 資料庫管理操作</li>
                   <li>具備 <em>Docker/Kubernetes</em> 管理操作</li>
                   <li>具備 <em>Git</em> 版本控管經驗</li>
+                  <li>擁有 <em>Java</em> OCJP 程式設計證照</li>
                 </ul>
               </div>
             </div>
@@ -205,26 +206,29 @@
               <div class="outline-border p-4 h-100 item">
                 <h6 class="fw-bolder">Frontend Development</h6>
                 <ul class="fw-lighter">
-                  <li>具備 <em>JavaScript, CSS, HTML</em></li>
+                  <li>熟悉 <em>JavaScript, CSS, HTML 切版</em></li>
                   <li>具備 <em>React</em>前端框架</li>
                   <li>具備 <em>Vue</em>前端框架</li>
-                  <li>具備使用 <em>Tailwind CSS/Bootstrap </em>撰寫</li>
+                  <li>具備使用 <em>Tailwind CSS </em>撰寫樣式</li>
+                  <li>具備使用 <em>Bootstrap </em>撰寫樣式</li>
+                  <li>能運用 <em>Linter、Jest </em>等維護程式碼品質</li>
                 </ul>
               </div>
             </div>
             <div class="col-12 col-md-4">
               <div class="outline-border p-4 h-100 item">
-                <h6 class="fw-bolder">work and study about</h6>
+                <h6 class="fw-bolder">Work And Study About</h6>
                 <ul class="fw-lighter">
-                  <li>研究 <em>SCSS / CSS3</em></li>
-                  <li>研究 <em>TypeScript</em></li>
-                  <li>學習 <em>Nuxt 3</em> 架構</li>
+                  <li>學習 <em>SCSS / CSS3</em></li>
+                  <li>學習 <em>TypeScript</em></li>
+                  <li>運用 <em>Nuxt 3</em> 架構</li>
                   <li>學習 <em>User Experience</em></li>
                   <li>使用 <em>Google Firebase</em></li>
                 </ul>
               </div>
             </div>
           </div>
+
         </div>
       </transition>
     </section>

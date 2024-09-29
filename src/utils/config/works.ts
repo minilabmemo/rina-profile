@@ -18,7 +18,7 @@ import imgEBook from '@/assets/images/work-e-book.png'
 
 export const works: Iwork[] = [
   {
-    date: '2024/05',
+    date: '2024/09',
     title: '電子商務購物網站',
     img: imgEc,
     tags: ['Vue', 'Bootstrap', 'Pinia', 'Vite', 'Eslint', 'Cypress'],
