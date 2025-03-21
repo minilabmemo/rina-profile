@@ -1,8 +1,11 @@
-# f2e-boot-vite
+# fe-bootstrap-starter
 
-這是一個練習專案，使用 vite 建立，加上 bootstrap 樣式設定的練習場。
+這是一個 VUE 練習專案，使用 vite 建立，加上 bootstrap 樣式設定的練習場。
 
 ## 練習項目
+
+- 首頁： 關於我 My Profile
+- 練習列表位置：http://localhost:5173/#/list
 
 1. 練習最終作業 購物車的過程 [option API]。
 

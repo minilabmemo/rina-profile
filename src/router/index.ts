@@ -22,6 +22,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      meta: {
+        title: 'My Profile | Software Engineer!',
+        icon: profileFavIcon
+      },
+      component: () => import('../views/Lab/AboutMe.vue')
+    },
+    {
+      path: '/list',
+      name: 'list',
       component: HomeView
     },
     {
