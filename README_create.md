@@ -5,7 +5,7 @@ $ npm create vite@latest
 Need to install the following packages:
 create-vite@5.2.1
 Ok to proceed? (y) y
-✔ Project name: … f2e-boot-vite
+✔ Project name: … fe-bootstrap-starter
 ✔ Select a framework: › Vue
 ✔ Select a variant: › Customize with create-vue ↗
 Need to install the following packages:
@@ -23,18 +23,18 @@ Vue.js - The Progressive JavaScript Framework
 ✔ 是否引入 ESLint 用於程式碼品質檢測？ … 否 / 是
 ✔ 是否引入 Prettier 用於程式碼格式化？ … 否 / 是
 
-正在建置專案 /dev/front/vue/f2e-boot-vite...
+正在建置專案 /dev/front/vue/fe-bootstrap-starter...
 
 專案建置完成，可執行以下命令：
 
-cd f2e-boot-vite
+cd fe-bootstrap-starter
 npm install
 npm run format
 npm run dev
 
 ## 以下是預設的 README.md：案：
 
-# f2e-boot-vite
+# fe-bootstrap-starter
 
 This template should help get you started developing with Vue 3 in Vite.
 
