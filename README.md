@@ -1,10 +1,14 @@
 # rina-profile
 
-個人簡歷頁面 (VUE + vite + bootstrap)
+展示個人簡歷頁面，fe-bootstrap-starter (VUE + vite + bootstrap) 延伸專案
 
 - fe-bootstrap-starter
   這是一個 VUE 練習專案，使用 vite 建立，加上 bootstrap 樣式設定的練習場。
 - rina-profile 作為個人簡歷頁面
+
+## 部署
+
+Setting-> Page -> GitHub Pages 調整到 GitHub Actions
 
 ## 練習項目
 
