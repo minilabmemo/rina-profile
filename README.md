@@ -1,6 +1,10 @@
-# fe-bootstrap-starter
+# rina-profile
 
-這是一個 VUE 練習專案，使用 vite 建立，加上 bootstrap 樣式設定的練習場。
+個人簡歷頁面 (VUE + vite + bootstrap)
+
+- fe-bootstrap-starter
+  這是一個 VUE 練習專案，使用 vite 建立，加上 bootstrap 樣式設定的練習場。
+- rina-profile 作為個人簡歷頁面
 
 ## 練習項目
 
