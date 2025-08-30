@@ -44,7 +44,7 @@
     <section class="my-6 text-primary" id="about">
       <transition name="slide-left">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder">about me</h1>
+          <h1 class="fs-3 fw-bolder">About me</h1>
 
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
           <div class="p-2">
@@ -115,7 +115,7 @@
     <section class="my-6 text-black" id="skills">
       <transition name="slide-right">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder text-primary">skills</h1>
+          <h1 class="fs-3 fw-bolder text-primary">Skills</h1>
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
           <div class="row justify-content-between gy-3 mt-3">
             <div class="col-12 col-md-6 col-lg-3 p-2">
@@ -261,11 +261,27 @@
     <section class="my-6 text-black" id="works">
       <transition name="slide-left">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder text-primary">works</h1>
+          <h1 class="fs-3 fw-bolder text-primary">Works</h1>
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
+
+          <!-- 標籤篩選器 -->
+          <div class="tag-filter mt-4 mb-4">
+            <div class="d-flex flex-wrap gap-2 justify-content-start align-items-center">
+              <i class="bi bi-funnel filter-icon"></i>
+              <button
+                v-for="tag in allTags"
+                :key="tag"
+                @click="toggleTag(tag)"
+                :class="['tag-filter-btn', { active: selectedTag === tag }]"
+              >
+                {{ tag }}
+              </button>
+            </div>
+          </div>
+
           <div class="d-flex flex-wrap justify-content-around mt-4">
-            <template v-for="(item, i) in works" :key="i">
-              <div class="" style="flex-basis: 22rem" v-if="!item.isHide">
+            <template v-for="(item, i) in filteredWorks" :key="i">
+              <div class="" style="flex-basis: 22rem">
                 <WorkItem :item="item"></WorkItem>
               </div>
             </template>
@@ -281,9 +297,34 @@ import CircleImage from '@/components/Lab/CircleImage.vue'
 import WorkItem from '@/components/Lab/WorkItem.vue'
 import { works } from '@/utils/config/works'
 import TypingEffect from '@/components/Lab/TypingEffect.vue'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const showContent = ref(false)
+const selectedTag = ref('')
+
+// 獲取所有唯一標籤
+const allTags = computed(() => {
+  const tags = new Set<string>()
+  works.forEach((work) => {
+    if (!work.isHide) {
+      work.tags.forEach((tag) => tags.add(tag))
+    }
+  })
+  return Array.from(tags).sort()
+})
+
+// 篩選後的作品
+const filteredWorks = computed(() => {
+  if (!selectedTag.value) {
+    return works.filter((work) => !work.isHide)
+  }
+  return works.filter((work) => !work.isHide && work.tags.includes(selectedTag.value))
+})
+
+// 切換標籤篩選
+const toggleTag = (tag: string) => {
+  selectedTag.value = selectedTag.value === tag ? '' : tag
+}
 
 onMounted(() => {
   setTimeout(() => {
@@ -435,5 +476,82 @@ button.button-3d:active::before {
 
 .size-md {
   font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+}
+
+/* 標籤篩選器樣式 */
+.tag-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6c757d;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  min-width: 50px;
+  position: relative;
+  overflow: hidden;
+  height: 1.75rem;
+}
+
+.tag-filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.tag-filter-btn:hover {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.tag-filter-btn:hover::before {
+  left: 100%;
+}
+
+.tag-filter-btn.active {
+  color: white;
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.tag-filter-btn.active:hover {
+  background: var(--bs-primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(var(--bs-primary-rgb), 0.4);
+}
+
+.tag-filter {
+  position: relative;
+}
+
+.filter-icon {
+  font-size: 1rem;
+  color: #495057;
+  opacity: 0.8;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.filter-icon:hover {
+  color: #343a40;
+  opacity: 1;
+  transform: scale(1.1);
 }
 </style>
