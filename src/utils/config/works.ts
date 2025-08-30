@@ -17,6 +17,11 @@ import imgMiao from '@/assets/images/work-miao.png'
 import imgEBook from '@/assets/images/work-e-book.png'
 import videoEc from '@/assets/videos/ec-store.mp4'
 import videoEc2 from '@/assets/videos/ec-store2.mp4'
+import videoBus from '@/assets/videos/time-twbus.mp4'
+import videoBusStation from '@/assets/videos/time-twbus-station.mp4'
+import videoBusNearby from '@/assets/videos/time-twbus-nearby.mp4'
+import videoPresidentTw1 from '@/assets/videos/president-tw1.mp4'
+import videoPresidentTw2 from '@/assets/videos/president-tw2.mp4'
 
 export const works: Iwork[] = [
   {
@@ -24,7 +29,7 @@ export const works: Iwork[] = [
     title: '電子商務購物網站',
     img: imgEc,
     videos: [
-      { src: imgEc, description: '購物網站 + 響應式設計', type: 'image' },
+      { src: imgEc, description: '購物網站 & 響應式設計', type: 'image' },
       { src: videoEc, description: '商品展示與購物車', type: 'video' },
       { src: videoEc2, description: '會員管理', type: 'video' }
     ],
@@ -50,6 +55,12 @@ export const works: Iwork[] = [
     date: '2023/11',
     title: '公車動態查詢服務 ',
     img: imgBus,
+    videos: [
+      { src: imgBus, description: '功能 &  響應式設計', type: 'image' },
+      { src: videoBus, description: '首頁 & 站點查詢', type: 'video' },
+      { src: videoBusStation, description: '站點動態更新', type: 'video' },
+      { src: videoBusNearby, description: '自動定位附近站點', type: 'video' }
+    ],
     tags: ['React', 'Typescript', 'SCSS', 'Leaflet', 'OpenStreetMap'],
     website: 'https://minilabmemo.github.io/f2e-time-twbus/',
     repository: 'https://github.com/minilabmemo/f2e-time-twbus',
@@ -60,6 +71,11 @@ export const works: Iwork[] = [
     date: '2023/12',
     title: '即時開票全台地圖 ',
     img: imgTW,
+    videos: [
+      { src: imgTW, description: '台灣歷屆開票統計圖表', type: 'image' },
+      { src: videoPresidentTw1, description: '首頁', type: 'video' },
+      { src: videoPresidentTw2, description: '地圖色塊視覺顯示', type: 'video' }
+    ],
     tags: ['React', 'Next', 'Typescript', 'Tailwind CSS', 'D3', 'Vercel'],
     website: 'https://f2e-president-tw.vercel.app/',
     repository: 'https://github.com/minilabmemo/f2e-president-tw',
