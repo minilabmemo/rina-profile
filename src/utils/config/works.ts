@@ -24,7 +24,7 @@ export const works: Iwork[] = [
     tags: ['Vue', 'Bootstrap', 'Pinia', 'Vite', 'Eslint', 'Cypress'],
     website: 'https://minilabmemo.github.io/f2e-ec-store/#/',
     repository: 'https://github.com/minilabmemo/f2e-ec-store',
-    details: ['vue 3  composition API', 'pinia 狀態管理', '串接後端 Restful API ']
+    details: ['使用 vue 3  composition API', 'pinia 狀態管理', '串接後端 Restful API ']
   },
   {
     date: '2024/01',
@@ -46,7 +46,7 @@ export const works: Iwork[] = [
     tags: ['React', 'Typescript', 'SCSS', 'Leaflet', 'OpenStreetMap'],
     website: 'https://minilabmemo.github.io/f2e-time-twbus/',
     repository: 'https://github.com/minilabmemo/f2e-time-twbus',
-    details: ['台灣動態街景地圖 Leaflet+OpenStreetMap', '串接交通部運輸資料流通服務 API']
+    details: ['使用 Leaflet + OpenStreetMap 技術製作出台灣動態街景地圖 ', '串接交通部運輸資料流通服務 API']
   },
 
   {
@@ -59,7 +59,7 @@ export const works: Iwork[] = [
 
     details: [
       'The F2E 六角學院 修煉精神光屋 Mission 2 - 總統即時開票全台地圖',
-      '台灣地圖統計圖表 - 示範網頁'
+      '台灣地圖統計圖表 - 分區視覺著色'
     ]
   },
   {
@@ -98,19 +98,21 @@ export const works: Iwork[] = [
 ]
 
 export const tagColors: Record<string, string> = {
-  vue: 'bg-green',
-  leaflet: 'bg-green',
-  scss: 'bg-pink',
-  react: 'bg-teal',
-  next: 'bg-black',
-  bootstrap: 'bg-purple',
-  tailwindcss: 'bg-cyan',
-  pinia: 'bg-yellow',
-  javascript: 'bg-yellow',
-  vite: 'bg-blue',
-  typescript: 'bg-blue',
-  css: 'bg-blue',
-  cypress: 'bg-teal',
-  eslint: 'bg-indigo',
-  d3: 'bg-orange'
+  vue: 'tag-green',
+  leaflet: 'tag-green',
+  scss: 'tag-pink',
+  react: 'tag-teal',
+  next: 'tag-black',
+  bootstrap: 'tag-purple',
+  tailwindcss: 'tag-cyan',
+  pinia: 'tag-yellow',
+  javascript: 'tag-yellow',
+  vite: 'tag-blue',
+  typescript: 'tag-blue',
+  css: 'tag-blue',
+  cypress: 'tag-teal',
+  eslint: 'tag-indigo',
+  d3: 'tag-orange',
+  chromeextension: 'tag-gray',
+  storybook: 'tag-pink'
 }

@@ -1,33 +1,49 @@
 <template>
   <div class="card-container" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
-    <div :style="cardStyle" class="card d-flex flex-column align-items-center justify-content-center p-3 work-item m-3">
-      <div class="text-primary fw-bolder fs-5">{{ item.date }}</div>
-      <div class="bg-primary title-line" style="height: 5px"></div>
-      <div class="content-item mt-1 p-3 d-flex flex-column align-items-center">
-        <div class="text-black fs-4 fw-bolder my-2">{{ item.title }}</div>
-        <div class="" style="max-width: 200px">
+    <div :style="cardStyle" class="card work-item m-3">
+      <!-- Header Section: 日期標籤 -->
+      <div class="project-header">
+        <span class="date-badge">{{ item.date }}</span>
+      </div>
+
+      <!-- Content Section -->
+      <div class="project-content">
+        <!-- Title Section: 專案標題 -->
+        <h3 class="project-title">{{ item.title }}</h3>
+        <div class="bg-primary title-line"></div>
+
+        <!-- Preview Section: 專案預覽圖 -->
+        <div class="project-preview">
           <img :src="item.img" alt="work" class="flex-image" />
         </div>
-        <div class="d-flex flex-wrap align-items-center gap-1 my-3" style="min-height: 3rem">
-          <span style="min-width: 3rem" :class="tagColor(tag)" class="px-2 fw-bolder text-white text-center"
-            v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+
+        <!-- Tech Stack Section: 技術標籤 -->
+        <div class="tech-stack">
+          <span :class="tagColor(tag)" class="tag-item" v-for="tag in item.tags" :key="tag">{{
+            tag
+          }}</span>
         </div>
 
-        <div class="align-self-start fw-bolder" style="min-height: 5.2rem">
-          <ul>
-            <li class="" v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
+        <!-- Description Section: 專案描述 -->
+        <div class="project-description">
+          <ul class="feature-list">
+            <li v-for="(detail, i) in item.details" :key="i" class="feature-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span>{{ detail }}</span>
+            </li>
           </ul>
         </div>
-        <div class="w-100 d-flex justify-content-evenly mt-1 fs-5 fw-bolder gap-1">
-          <span class="nav-link" v-if="item.website">
-            <a :href="item.website" class="text-secondary" target="_blank">
-              <i class="bi bi-globe"></i> website</a>
-          </span>
-          <span class="">
-            <a :href="item.repository" class="text-secondary" target="_blank">
-              <i class="bi bi-github"></i>
-              repository</a>
-          </span>
+
+        <!-- Action Section: 外部連結 -->
+        <div class="project-actions">
+          <a v-if="item.website" :href="item.website" class="action-btn primary" target="_blank">
+            <i class="bi bi-globe"></i>
+            <span>Website</span>
+          </a>
+          <a :href="item.repository" class="action-btn secondary" target="_blank">
+            <i class="bi bi-github"></i>
+            <span>Repository</span>
+          </a>
         </div>
       </div>
     </div>
@@ -86,6 +102,9 @@ function handleMouseLeave() {
   border: 2px solid var(--bs-orange-900);
   transform-style: preserve-3d;
   transition: transform 0.1s ease-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .card::before {
@@ -132,5 +151,244 @@ function handleMouseLeave() {
   aspect-ratio: 3/2;
   width: 100%;
   height: auto;
+}
+
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  border-radius: 0.75rem;
+  min-width: 2.5rem;
+  height: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tag-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.tag-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tag-item:hover::before {
+  left: 100%;
+}
+
+/* === 優化後的區塊樣式 === */
+
+/* Header Section: 日期標籤 */
+.project-header {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.date-badge {
+  background: var(--bs-primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+}
+
+/* Content Section */
+.project-content {
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+/* Title Section: 專案標題 */
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bs-dark);
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.title-line {
+  height: 3px;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+  margin: 0.5rem 0;
+}
+
+.work-item:hover .title-line {
+  width: 60px;
+}
+
+/* Preview Section: 專案預覽圖 */
+.project-preview {
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Tech Stack Section: 技術標籤 */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.375rem;
+  align-items: center;
+  max-width: 280px;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+/* Description Section: 專案描述 */
+.project-description {
+  width: 100%;
+  min-height: 4rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.feature-item i {
+  color: var(--bs-success);
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.feature-item span {
+  color: var(--bs-dark);
+}
+
+/* Action Section: 外部連結 */
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  justify-content: center;
+  max-width: 120px;
+}
+
+.action-btn.primary {
+  background: var(--bs-primary);
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: var(--bs-primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.action-btn.secondary {
+  background: var(--bs-secondary);
+  color: white;
+}
+
+.action-btn.secondary:hover {
+  background: var(--bs-secondary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(var(--bs-secondary-rgb), 0.3);
+}
+
+.action-btn i {
+  font-size: 1rem;
+}
+
+/* === 統一的標籤顏色系統 === */
+.tag-green {
+  background: #059669 !important; /* emerald-600 */
+}
+
+.tag-blue {
+  background: #2563eb !important; /* blue-600 */
+}
+
+.tag-teal {
+  background: #0891b2 !important; /* cyan-600 */
+}
+
+.tag-purple {
+  background: #9333ea !important; /* purple-600 */
+}
+
+.tag-pink {
+  background: #db2777 !important; /* pink-600 */
+}
+
+.tag-yellow {
+  background: #ca8a04 !important; /* yellow-600 */
+}
+
+.tag-orange {
+  background: #ea580c !important; /* orange-600 */
+}
+
+.tag-indigo {
+  background: #4f46e5 !important; /* indigo-600 */
+}
+
+.tag-cyan {
+  background: #0891b2 !important; /* cyan-600 */
+}
+
+.tag-black {
+  background: #374151 !important; /* gray-700 */
+}
+
+.tag-gray {
+  background: #6b7280 !important; /* gray-500 */
 }
 </style>

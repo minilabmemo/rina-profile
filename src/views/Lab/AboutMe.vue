@@ -13,25 +13,33 @@
             <ul class="navbar-nav d-flex flex-row gap-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#/lab/about#about">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">about</button>
+                  <button type="button" class="button-3d fw-bolder size-md text-black">
+                    about
+                  </button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#skills">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">skills</button>
+                  <button type="button" class="button-3d fw-bolder size-md text-black">
+                    skills
+                  </button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#works">
                   <button type="button" class="button-3d fw-bolder size-md text-black">
                     works
-                  </button></a>
+                  </button></a
+                >
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="bg-primary d-flex justify-content-center mt-2" style="height: 1px; width: 100%; opacity: 0.4"></div>
+      <div
+        class="bg-primary d-flex justify-content-center mt-2"
+        style="height: 1px; width: 100%; opacity: 0.4"
+      ></div>
     </header>
     <section class="my-6 text-primary" id="about">
       <transition name="slide-left">
@@ -52,7 +60,8 @@
                   <h1 class="me-2">
                     Rina Huang
                     <span>
-                      <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1" /></span>
+                      <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1"
+                    /></span>
                     <span class="fs-6 text-secondary">Taiwan</span>
                   </h1>
                 </div>
@@ -62,20 +71,36 @@
 
                 <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
                   <div class="col d-flex">
-                    <a href="https://github.com/minilabmemo" class="nav-link d-inline" target="_blank">
+                    <a
+                      href="https://github.com/minilabmemo"
+                      class="nav-link d-inline"
+                      target="_blank"
+                    >
                       <img src="@/assets/icons/icon_github.svg" alt="icon_github" class="me-1" />
                       <span>GITHUB : https://github.com/minilabmemo </span>
                     </a>
                   </div>
                   <div class="col">
-                    <a href="https://minilabmemo.github.io/" class="nav-link d-inline" target="_blank">
+                    <a
+                      href="https://minilabmemo.github.io/"
+                      class="nav-link d-inline"
+                      target="_blank"
+                    >
                       <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
                       <span>BLOG : https://minilabmemo.github.io/</span>
                     </a>
                   </div>
                   <div class="col">
-                    <a href="https://www.instagram.com/minilabmemo/" class="nav-link d-inline" target="_blank">
-                      <img src="@/assets/icons/icon_instagram.svg" alt="icon_instagram" class="me-1" />
+                    <a
+                      href="https://www.instagram.com/minilabmemo/"
+                      class="nav-link d-inline"
+                      target="_blank"
+                    >
+                      <img
+                        src="@/assets/icons/icon_instagram.svg"
+                        alt="icon_instagram"
+                        class="me-1"
+                      />
                       <span class="text-uppercase"> instagram : minilabmemo</span>
                     </a>
                   </div>
@@ -145,7 +170,9 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 p-2">
               <div class="d-flex gap-1 outline-border p-3 align-items-start item">
-                <div class="icon"><img src="@/assets/icons/icon_devops.svg" alt="icon_devops" /></div>
+                <div class="icon">
+                  <img src="@/assets/icons/icon_devops.svg" alt="icon_devops" />
+                </div>
                 <div class="border-start ps-2">
                   <h6 class="fw-bolder text-uppercase">DevOps</h6>
 
@@ -191,44 +218,42 @@
           <div class="row justify-content-between gy-3 mt-3">
             <div class="col-12 col-md-4">
               <div class="outline-border p-4 h-100 item">
-                <h6 class="fw-bolder">Backend Development</h6>
+                <h6 class="fw-bolder">後端技術（Backend Development）</h6>
                 <ul class="fw-lighter">
-                  <li>熟悉 <em>Restful API </em>和多種 OT 通訊協定</li>
-                  <li>熟悉 <em>Golang</em> 程式語言</li>
-                  <li>具備 <em>SQL/NoSQL</em> 資料庫管理操作</li>
-                  <li>具備 <em>Docker/Kubernetes</em> 管理操作</li>
-                  <li>具備 <em>Git</em> 版本控管經驗</li>
-                  <li>擁有 <em>Java</em> OCJP 程式設計證照</li>
+                  <li>熟悉 Restful API 和多種 OT 通訊協定</li>
+                  <li>熟悉 Golang 程式語言</li>
+                  <li>具備 SQL/NoSQL 資料庫管理操作</li>
+                  <li>具備 Docker/Kubernetes 管理操作</li>
+                  <li>具備 Git 版本控管經驗</li>
+                  <li>擁有 Java OCJP 程式設計證照</li>
                 </ul>
               </div>
             </div>
             <div class="col-12 col-md-4">
               <div class="outline-border p-4 h-100 item">
-                <h6 class="fw-bolder">Frontend Development</h6>
+                <h6 class="fw-bolder">前端技術（Frontend Development）</h6>
                 <ul class="fw-lighter">
-                  <li>熟悉 <em>JavaScript, CSS, HTML 切版</em></li>
-                  <li>具備 <em>React</em>前端框架</li>
-                  <li>具備 <em>Vue</em>前端框架</li>
-                  <li>具備使用 <em>Tailwind CSS </em>撰寫樣式</li>
-                  <li>具備使用 <em>Bootstrap </em>撰寫樣式</li>
-                  <li>能運用 <em>Linter、Jest </em>等維護程式碼品質</li>
+                  <li>熟悉 JavaScript, CSS, HTML 切版</li>
+                  <li>具備 React 前端框架</li>
+                  <li>具備 Vue 前端框架</li>
+                  <li>具備使用 Tailwind CSS 撰寫樣式</li>
+                  <li>具備使用 Bootstrap 撰寫樣式</li>
+                  <li>能運用 Linter、Jest 等維護程式碼品質</li>
                 </ul>
               </div>
             </div>
             <div class="col-12 col-md-4">
               <div class="outline-border p-4 h-100 item">
-                <h6 class="fw-bolder">Work And Study About</h6>
+                <h6 class="fw-bolder">學習中（Work And Study About）</h6>
                 <ul class="fw-lighter">
-                  <li>學習 <em>SCSS / CSS3</em></li>
-                  <li>學習 <em>TypeScript</em></li>
-                  <li>運用 <em>Nuxt 3</em> 架構</li>
-                  <li>學習 <em>User Experience</em></li>
-                  <li>使用 <em>Google Firebase</em></li>
+                  <li>運用 AI Coding</li>
+                  <li>運用 TypeScript</li>
+                  <li>運用 Nuxt 3 架構</li>
+                  <li>研究 User Experience</li>
                 </ul>
               </div>
             </div>
           </div>
-
         </div>
       </transition>
     </section>
@@ -240,7 +265,7 @@
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
           <div class="d-flex flex-wrap justify-content-around mt-4">
             <template v-for="(item, i) in works" :key="i">
-              <div class="" style="flex-basis: 24rem" v-if="!item.isHide">
+              <div class="" style="flex-basis: 22rem" v-if="!item.isHide">
                 <WorkItem :item="item"></WorkItem>
               </div>
             </template>
@@ -256,21 +281,21 @@ import CircleImage from '@/components/Lab/CircleImage.vue'
 import WorkItem from '@/components/Lab/WorkItem.vue'
 import { works } from '@/utils/config/works'
 import TypingEffect from '@/components/Lab/TypingEffect.vue'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
 
-const showContent = ref(false);
+const showContent = ref(false)
 
 onMounted(() => {
   setTimeout(() => {
-    showContent.value = true;
-  }, 500);
-});
+    showContent.value = true
+  }, 500)
+})
 </script>
 
 <style lang="css" scoped>
 .slide-left-enter-active,
 .slide-left-leave-active {
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .slide-left-enter-from,
@@ -312,12 +337,6 @@ header {
   aspect-ratio: 1/1;
   width: 100%;
   height: auto;
-}
-
-em {
-  color: var(--bs-secondary);
-  font-weight: 700;
-  margin-right: 0.2rem;
 }
 
 .my-tooltip {
