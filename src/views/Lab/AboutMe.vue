@@ -87,7 +87,7 @@
                       target="_blank"
                     >
                       <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
-                      <span>NOTE : 前後端開發筆記</span>
+                      <span>MEMO : 前後端開發筆記</span>
                     </a>
                   </div>
                   <div class="col">
