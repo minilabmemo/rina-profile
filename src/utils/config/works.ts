@@ -5,7 +5,7 @@ export interface Iwork {
   tags: string[]
   website?: string
   repository: string
-
+  videos?: { src: string; description: string; type?: 'image' | 'video' }[]
   details: string[]
   isHide?: boolean
 }
@@ -15,12 +15,19 @@ import imgBus from '@/assets/images/work-bus.png'
 import imgTW from '@/assets/images/work-tw.png'
 import imgMiao from '@/assets/images/work-miao.png'
 import imgEBook from '@/assets/images/work-e-book.png'
+import videoEc from '@/assets/videos/ec-store.mp4'
+import videoEc2 from '@/assets/videos/ec-store2.mp4'
 
 export const works: Iwork[] = [
   {
     date: '2024/09',
     title: '電子商務購物網站',
     img: imgEc,
+    videos: [
+      { src: imgEc, description: '購物網站 + 響應式設計', type: 'image' },
+      { src: videoEc, description: '商品展示與購物車', type: 'video' },
+      { src: videoEc2, description: '會員管理', type: 'video' }
+    ],
     tags: ['Vue', 'Bootstrap', 'Pinia', 'Vite', 'Eslint', 'Cypress'],
     website: 'https://minilabmemo.github.io/f2e-ec-store/#/',
     repository: 'https://github.com/minilabmemo/f2e-ec-store',
