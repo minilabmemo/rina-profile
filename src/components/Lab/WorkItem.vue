@@ -49,7 +49,7 @@
           <ul class="feature-list">
             <li v-for="(detail, i) in item.details" :key="i" class="feature-item">
               <i class="bi bi-check-circle-fill"></i>
-              <span>{{ detail }}</span>
+              <span v-html="detail"></span>
             </li>
           </ul>
         </div>

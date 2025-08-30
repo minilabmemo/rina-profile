@@ -94,7 +94,7 @@ export const works: Iwork[] = [
     repository: ' https://github.com/minilabmemo/f2e-election-person',
     details: [
       'The F2E 六角學院 修煉精神光屋 2023 Mission 1 - 立委競選官網',
-      '立委個人資訊介紹 - 示範網頁'
+      '立委個人資訊設計稿 - <a href="https://2023.thef2e.com/users/12061579704041679194" target="_blank" style="color: var(--bs-primary); text-decoration: underline;">設計來源</a>'
     ]
   },
   {
@@ -106,7 +106,7 @@ export const works: Iwork[] = [
     repository: 'https://github.com/minilabmemo/f2e-election-meowsakka',
     details: [
       'The F2E 六角學院 修煉精神光屋 2023 Mission 1 - 立委競選官網',
-      '立委個人資訊介紹 - 示範網頁'
+      '立委個人資訊設計稿 - <a href="https://2023.thef2e.com/users/12061579704041679225" target="_blank" style="color: var(--bs-primary); text-decoration: underline;">設計來源</a>'
     ]
   },
   {
