@@ -82,12 +82,12 @@
                   </div>
                   <div class="col">
                     <a
-                      href="https://minilabmemo.github.io/"
+                      href="https://minilabmemo.github.io/memo-code-blog/"
                       class="nav-link d-inline"
                       target="_blank"
                     >
                       <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
-                      <span>BLOG : https://minilabmemo.github.io/</span>
+                      <span>NOTE : 前後端開發筆記</span>
                     </a>
                   </div>
                   <div class="col">
