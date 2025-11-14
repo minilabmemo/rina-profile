@@ -26,9 +26,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/lab/about#learning">
+                <a class="nav-link" href="#/lab/about#training">
                   <button type="button" class="button-3d fw-bolder size-md text-black">
-                    learning
+                    Training
                   </button>
                 </a>
               </li>
@@ -263,7 +263,7 @@
       </transition>
     </section>
 
-    <section class="my-6 text-black" id="learning">
+    <section class="my-6 text-black" id="training">
       <transition name="slide-left">
         <div v-if="showContent">
           <h1 class="fs-3 fw-bolder text-primary">Training & Certification</h1>

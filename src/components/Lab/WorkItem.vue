@@ -467,19 +467,20 @@ function previousVideo() {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   color: var(--bs-orange);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.625rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
   animation: pulse-hint 2s infinite;
   backdrop-filter: blur(4px);
   transition: all 0.3s ease;
+  border: 2px solid var(--bs-orange);
 }
 
 .project-preview:hover .preview-hint {
