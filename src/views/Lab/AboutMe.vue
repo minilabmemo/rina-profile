@@ -73,7 +73,7 @@
                   </h1>
                 </div>
                 <div class="mt-2 mb-3 text-secondary">
-                  擁有多年的後端開發經驗，目前正在學習前端技能。熱衷於探索有趣的應用工具提升效率。
+                  擁有豐富的後端開發經驗，自學前端技術，具備全端開發能力。熱衷於探索新工具，提升工作效率。
                 </div>
 
                 <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
@@ -94,7 +94,7 @@
                       target="_blank"
                     >
                       <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
-                      <span>MEMO : 前後端開發筆記</span>
+                      <span>MEMO : 前後端開發雜記</span>
                     </a>
                   </div>
                   <div class="col">
@@ -108,7 +108,7 @@
                         alt="icon_instagram"
                         class="me-1"
                       />
-                      <span class="text-uppercase"> instagram : minilabmemo</span>
+                      <span class="text-uppercase"> instagram : 小研究式 minilabmemo</span>
                     </a>
                   </div>
                   <div class="col"></div>
@@ -229,9 +229,9 @@
                 <ul class="fw-lighter">
                   <li>熟悉 Restful API 和多種 OT 通訊協定</li>
                   <li>熟悉 Golang 程式語言</li>
-                  <li>具備 SQL/NoSQL 資料庫管理操作</li>
-                  <li>具備 Docker/Kubernetes 管理操作</li>
-                  <li>具備 Git 版本控管經驗</li>
+                  <li>瞭解 SQL/NoSQL 資料庫管理操作</li>
+                  <li>瞭解 Docker/Kubernetes 管理操作</li>
+                  <li>瞭解 Git 版本控管經驗</li>
                   <li>擁有 Java OCJP 程式設計證照</li>
                 </ul>
               </div>
@@ -241,11 +241,10 @@
                 <h6 class="fw-bolder">前端技術（Frontend Development）</h6>
                 <ul class="fw-lighter">
                   <li>熟悉 JavaScript, CSS, HTML 切版</li>
-                  <li>具備 React 前端框架</li>
-                  <li>具備 Vue 前端框架</li>
-                  <li>具備使用 Tailwind CSS 撰寫樣式</li>
-                  <li>具備使用 Bootstrap 撰寫樣式</li>
-                  <li>能運用 Linter、Jest 等維護程式碼品質</li>
+                  <li>熟悉 Linter 維護程式碼品質</li>
+                  <li>瞭解 React / Vue 前端框架開發</li>
+                  <li>瞭解 Tailwind CSS / Bootstrap 撰寫樣式</li>
+                  <li>瞭解 Playwright / Vitest 測試工具</li>
                 </ul>
               </div>
             </div>
@@ -253,10 +252,9 @@
               <div class="outline-border p-4 h-100 item">
                 <h6 class="fw-bolder">學習中（Work And Study About）</h6>
                 <ul class="fw-lighter">
-                  <li>運用 AI Coding</li>
-                  <li>運用 TypeScript</li>
-                  <li>運用 Nuxt 3 架構</li>
-                  <li>研究 User Experience</li>
+                  <li>各種 AI Coding 工具</li>
+                  <li>運用 Nuxt 3 架構撰寫網站</li>
+                  <li>動畫 Rive 製作</li>
                 </ul>
               </div>
             </div>
@@ -314,7 +312,7 @@
                       完成六角學院 The F2E 前端課程
                     </div>
                     <ul class="mb-2 ps-3" style="font-size: 13px">
-                      <li class="text-secondary">2023 六角學院 Vue 3 實戰影音課程+程式勇者村</li>
+                      <li class="text-secondary">2023 六角學院 Vue 3 實戰影音課程 + 程式勇者村</li>
                       <li class="text-secondary">2023 The F2E 前端 & UI 修煉精神時光屋 金級徽章</li>
                     </ul>
                     <a
@@ -465,19 +463,38 @@ header {
 
 .my-tooltip .tooltiptext {
   visibility: hidden;
-
+  opacity: 0;
   background-color: rgba(var(--bs-secondary-rgb));
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 2px 5px;
-
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+
+.my-tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(var(--bs-secondary-rgb)) transparent transparent transparent;
 }
 
 .my-tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 1;
 }
 
 button {
