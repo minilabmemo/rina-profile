@@ -26,6 +26,13 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#/lab/about#learning">
+                  <button type="button" class="button-3d fw-bolder size-md text-black">
+                    learning
+                  </button>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#works">
                   <button type="button" class="button-3d fw-bolder size-md text-black">
                     works
@@ -251,6 +258,77 @@
                   <li>運用 Nuxt 3 架構</li>
                   <li>研究 User Experience</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </section>
+
+    <section class="my-6 text-black" id="learning">
+      <transition name="slide-left">
+        <div v-if="showContent">
+          <h1 class="fs-3 fw-bolder text-primary">Training & Certification</h1>
+          <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
+
+          <div class="row justify-content-start gy-3 mt-3">
+            <div class="col-12 col-md-6 p-2">
+              <div class="outline-border p-3 h-100 item">
+                <div class="d-flex align-items-start gap-2">
+                  <div class="icon" style="width: 2rem; height: 2rem">
+                    <img src="@/assets/icons/icon_tools.svg" alt="icon_learning" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bolder mb-2" style="font-size: 14px">Google AI 培訓計畫</h6>
+                    <div class="text-secondary mb-2" style="font-size: 13px">
+                      獲得超過 30 個課程徽章
+                    </div>
+                    <ul class="mb-2 ps-3" style="font-size: 13px">
+                      <li class="text-secondary">2025 Google Cloud AI 培訓計畫</li>
+                      <li class="text-secondary">2024 生成式 AI 培訓計劃</li>
+                    </ul>
+                    <a
+                      href="https://www.credly.com/users/minilab-memo/badges#credly"
+                      class="nav-link text-primary fw-medium p-0"
+                      target="_blank"
+                      style="font-size: 13px"
+                    >
+                      <i class="bi bi-award-fill me-1"></i>
+                      查看徽章與課程
+                      <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 p-2">
+              <div class="outline-border p-3 h-100 item">
+                <div class="d-flex align-items-start gap-2">
+                  <div class="icon" style="width: 2rem; height: 2rem">
+                    <img src="@/assets/icons/icon_fe.svg" alt="icon_f2e" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bolder mb-2" style="font-size: 14px">前端培訓課程</h6>
+                    <div class="text-secondary mb-2" style="font-size: 13px">
+                      完成六角學院 The F2E 前端課程
+                    </div>
+                    <ul class="mb-2 ps-3" style="font-size: 13px">
+                      <li class="text-secondary">2023 六角學院 Vue 3 實戰影音課程+程式勇者村</li>
+                      <li class="text-secondary">2023 The F2E 前端 & UI 修煉精神時光屋 金級徽章</li>
+                    </ul>
+                    <a
+                      href="https://2023.thef2e.com/users/12062117482778778495?week=1"
+                      class="nav-link text-primary fw-medium p-0"
+                      target="_blank"
+                      style="font-size: 13px"
+                    >
+                      <i class="bi bi-award-fill me-1"></i>
+                      查看 F2E 作品成果
+                      <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
