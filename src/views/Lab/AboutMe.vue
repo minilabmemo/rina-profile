@@ -73,7 +73,7 @@
                   </h1>
                 </div>
                 <div class="mt-2 mb-3 text-secondary">
-                  擁有豐富的後端開發經驗，自學前端技術，具備全端開發能力。熱衷於探索新工具，提升工作效率。
+                  擁有豐富的後端開發經驗，自學前端技術，具備全端開發能力。熱愛探索能提升效率或帶來趣味的各類工具。
                 </div>
 
                 <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
@@ -312,7 +312,7 @@
                       完成六角學院 The F2E 前端課程
                     </div>
                     <ul class="mb-2 ps-3" style="font-size: 13px">
-                      <li class="text-secondary">2023 六角學院 Vue 3 實戰影音課程 + 程式勇者村</li>
+                      <li class="text-secondary">2024 六角學院 Vue 3 實戰影音課程 + 程式勇者村</li>
                       <li class="text-secondary">2023 The F2E 前端 & UI 修煉精神時光屋 金級徽章</li>
                     </ul>
                     <a
