@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import NotFound from '../views/Base/NotFound.vue'
 import { useFavicon } from '@vueuse/core'
@@ -7,7 +7,7 @@ const icon = useFavicon()
 const profileFavIcon = 'profile_logo.ico'
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to) {
     if (to.hash) {
       return {
