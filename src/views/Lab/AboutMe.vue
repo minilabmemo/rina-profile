@@ -3,40 +3,32 @@
     <header class="position-sticky top-0 bg-white">
       <nav class="navbar">
         <div class="flex-grow-1 d-flex justify-content-between align-items-center flex-wrap">
-          <a class="navbar-brand" href="#/lab/about">
+          <a class="navbar-brand" href="/">
             <div class="d-flex align-items-center gap-2">
-              <img src="@/assets/icons/profile_logo.svg" alt="profile_logo" />
-              <span class="fw-bolder text-primary fs-2 text-uppercase">Welcome!</span>
+              <i class="bi bi-journal-richtext fs-2 text-primary"></i>
+              <span class="fs-2 text-primary serif-font fw-bold fst-italic">Rina's Lab.</span>
             </div>
           </a>
           <div class="d-flex">
             <ul class="navbar-nav d-flex flex-row gap-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#/lab/about#about">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">
-                    about
-                  </button>
+                  <button type="button" class="button-3d fw-bolder size-md">about</button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#skills">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">
-                    skills
-                  </button>
+                  <button type="button" class="button-3d fw-bolder size-md">skills</button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#training">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">
-                    Training
-                  </button>
+                  <button type="button" class="button-3d fw-bolder size-md">Training</button>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/lab/about#works">
-                  <button type="button" class="button-3d fw-bolder size-md text-black">
-                    works
-                  </button></a
+                  <button type="button" class="button-3d fw-bolder size-md">works</button></a
                 >
               </li>
             </ul>
@@ -51,7 +43,7 @@
     <section class="my-6 text-primary" id="about">
       <transition name="slide-left">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder">About me</h1>
+          <h1 class="fs-3 fw-bolder serif-font text-primary">About Me</h1>
 
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
           <div class="p-2">
@@ -64,11 +56,9 @@
               </div>
               <div class="col-12 col-lg-8">
                 <div>
-                  <h1 class="me-2">
+                  <h1 class="me-2 serif-font text-primary">
                     Rina Huang
-                    <span>
-                      <img src="@/assets/icons/icon_loc.svg" alt="icon_loc" class="me-1"
-                    /></span>
+                    <span> <i class="bi bi-geo-alt-fill me-1 fs-6"></i></span>
                     <span class="fs-6 text-secondary">Taiwan</span>
                   </h1>
                 </div>
@@ -76,14 +66,17 @@
                   擁有豐富的後端開發經驗，自學前端技術，具備全端開發能力。熱愛探索能提升效率或帶來趣味的各類工具。
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 text-black g-2" style="font-size: 14px">
+                <div
+                  class="row row-cols-1 row-cols-md-2 g-2 mono-font"
+                  style="font-size: 14px; color: #4e342e"
+                >
                   <div class="col d-flex">
                     <a
                       href="https://github.com/minilabmemo"
                       class="nav-link d-inline"
                       target="_blank"
                     >
-                      <img src="@/assets/icons/icon_github.svg" alt="icon_github" class="me-1" />
+                      <i class="bi bi-github me-1"></i>
                       <span>GITHUB : https://github.com/minilabmemo </span>
                     </a>
                   </div>
@@ -93,7 +86,7 @@
                       class="nav-link d-inline"
                       target="_blank"
                     >
-                      <img src="@/assets/icons/icon_blog.svg" alt="icon_blog" class="me-1" />
+                      <i class="bi bi-journal-text me-1"></i>
                       <span>MEMO : 前後端開發雜記</span>
                     </a>
                   </div>
@@ -103,12 +96,8 @@
                       class="nav-link d-inline"
                       target="_blank"
                     >
-                      <img
-                        src="@/assets/icons/icon_instagram.svg"
-                        alt="icon_instagram"
-                        class="me-1"
-                      />
-                      <span class="text-uppercase"> instagram : 小研究式 minilabmemo</span>
+                      <i class="bi bi-instagram me-1"></i>
+                      <span class="text-uppercase">instagram : 小研究式 minilabmemo</span>
                     </a>
                   </div>
                   <div class="col"></div>
@@ -122,7 +111,7 @@
     <section class="my-6 text-black" id="skills">
       <transition name="slide-right">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder text-primary">Skills</h1>
+          <h1 class="fs-3 fw-bolder text-primary serif-font">Skills</h1>
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
           <div class="row justify-content-between gy-3 mt-3">
             <div class="col-12 col-md-6 col-lg-3 p-2">
@@ -266,7 +255,7 @@
     <section class="my-6 text-black" id="training">
       <transition name="slide-left">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder text-primary">Training & Certification</h1>
+          <h1 class="fs-3 fw-bolder text-primary serif-font">Training & Certification</h1>
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
 
           <div class="row justify-content-start gy-3 mt-3">
@@ -337,7 +326,7 @@
     <section class="my-6 text-black" id="works">
       <transition name="slide-left">
         <div v-if="showContent">
-          <h1 class="fs-3 fw-bolder text-primary">Works</h1>
+          <h1 class="fs-3 fw-bolder text-primary serif-font">Works</h1>
           <div class="bg-primary mt-1" style="height: 7px; width: 100px"></div>
 
           <!-- 標籤篩選器 -->
@@ -464,7 +453,7 @@ header {
 .my-tooltip .tooltiptext {
   visibility: hidden;
   opacity: 0;
-  background-color: rgba(var(--bs-secondary-rgb));
+  background-color: #4e342e;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -489,7 +478,7 @@ header {
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: rgba(var(--bs-secondary-rgb)) transparent transparent transparent;
+  border-color: #4e342e transparent transparent transparent;
 }
 
 .my-tooltip:hover .tooltiptext {
@@ -511,7 +500,9 @@ button {
 
 button.button-3d {
   font-weight: 600;
-  color: #382b22;
+  color: #4e342e;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
   padding: 0.5em 0.75em;
   background: var(--bs-orange-100);
@@ -542,7 +533,6 @@ button.button-3d::before {
 }
 
 button.button-3d:hover {
-  color: var(--bs-orange-900);
   background: var(--bs-orange-300);
   transform: translate(0, 0.25em);
 }
@@ -648,5 +638,15 @@ button.button-3d:active::before {
   color: #343a40;
   opacity: 1;
   transform: scale(1.1);
+}
+
+.serif-font {
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: -0.5px;
+}
+
+.mono-font {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  letter-spacing: 0px;
 }
 </style>
