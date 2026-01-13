@@ -12,22 +12,22 @@
           <div class="d-flex">
             <ul class="navbar-nav d-flex flex-row gap-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#/lab/about#about">
+                <a class="nav-link active" aria-current="page" href="#about">
                   <button type="button" class="button-3d fw-bolder size-md">about</button>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/lab/about#skills">
+                <a class="nav-link" href="#skills">
                   <button type="button" class="button-3d fw-bolder size-md">skills</button>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/lab/about#training">
+                <a class="nav-link" href="#training">
                   <button type="button" class="button-3d fw-bolder size-md">Training</button>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/lab/about#works">
+                <a class="nav-link" href="#works">
                   <button type="button" class="button-3d fw-bolder size-md">works</button></a
                 >
               </li>
